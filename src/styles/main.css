@@ -1,0 +1,249 @@
+html{
+    scroll-behavior: smooth;
+}
+#aboutme{
+    height: 600px;
+    background-color: rgb(248, 85, 85);;
+}
+#contactme{
+    height: 600px;
+    width: 50%;
+    padding: 10px;
+    display: inline-block;
+    border-top-right-radius: 10px;
+    background-color: rgb(85, 248, 134);
+}
+.team_icon{
+    display: inline-block;
+    margin-left: 10px;
+    position: relative;
+    bottom: -10px;
+
+}
+.location{
+    position: absolute;
+    display: inline-block;
+    padding: 10px;
+    background-color: #1f1d1d;
+    color: white;
+}
+.fillable{
+    font-family: Roboto;
+    color: red;
+    padding-top: 10px;
+}
+.name{
+    display: inline-block;
+    border: transparent;
+    padding: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+
+}
+.email{
+    display: inline-block;
+    border: transparent;
+    padding: 10px;
+    margin-right: 10px;
+}
+.email:focus{
+    border-color: red;
+    border-width: 10px;
+}
+.message{
+    display: block;
+    border: transparent;
+    padding: 10px;
+    height: 10vh;
+    width: 390px;
+}
+.subject{
+    display: block;
+    border: transparent;
+    width: 390px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.body{
+    font-family: Roboto;
+    background-color: aliceblue;
+    transition: 0.5s;
+}
+
+.dark-mode{
+    background-color: #1f1d1d;
+    color: white;
+    height: 100%;
+    font-family: Roboto;
+    transition: 0.5s;
+}
+.git{
+    padding: 10px;
+}
+.cv{
+    display: block;
+    background-color: #1f1d1d;
+    color: white;
+    border-radius: 10px;
+    padding: 15px;
+    width: 190px;
+    font-size: 20px;
+    transition: 1s;
+}
+.cv:hover{
+    background-color: rgb(82, 79, 79);
+    transition: 1s;
+}
+.Resume{
+    font-family: Roboto;
+}
+.aboutme{
+    font-weight: bold;
+    padding-left: 10px;
+    margin-top: 1000px;
+}
+.container_res{
+    margin-left: 15px;
+    margin-right: 5vw;
+}
+bold{
+    font-weight: bold;
+    font-size: 20px;
+}
+.headline{
+    position: relative;
+    font-size: 80px;
+    display: inline-block;
+    font-family: Roboto;
+}
+.intro{
+    padding-top: 250px;
+    margin-left: 10px;
+}
+.headbar{
+    position: sticky;
+    z-index: 99;
+    top: 0;
+    left: 0;
+    padding-top: 10px;
+    width: 100%;
+    height: 50px;
+    background-color: transparent;
+    display: flex;
+    justify-content: flex-end;
+}
+.E{
+    color: rgb(248, 85, 85);
+    display: inline-block;
+    transition: transform 0.5s;
+}
+.S{
+    color: rgb(85, 123, 248);
+    display: inline-block;
+    transition: transform 0.5s;
+}
+.A{
+    color: rgb(85, 248, 134);
+    display: inline-block;
+    transition: transform 0.5s;
+}
+.U{
+    color: rgb(248, 232, 85);
+    display: inline-block;
+    transition: transform 0.5s;
+}
+.E:hover{
+    transform: translateY(-10px);
+    
+}
+.S:hover{
+    transform: translateY(-10px);
+    
+}
+.A:hover{
+    transform: translateY(-10px);
+    
+}
+.U:hover{
+    transform: translateY(-10px);
+    
+}
+
+.nav{
+    transition: transform 0.5s;
+    display: block;
+    font-family: Roboto;
+    font-size: 40px;
+    font-weight: 600;
+    position: relative;
+    padding-right: 15px;
+}
+.nav:hover{
+    transform: translateY(-10px);
+}
+
+
+  /*animated arrow*/
+  
+.arrow {
+    position: fixed;
+    bottom: 150px ;
+    right: 40px;
+    transform: translate(-50%, -50%);
+    transform: rotate(0deg);
+}
+.arrow span {
+    display: block;
+    width: 30px;
+    height: 30px;
+    border-bottom: 10px solid rgb(0, 0, 0);
+    border-right: 10px solid rgb(0, 0, 0);
+    transform: rotate(45deg);
+    margin: -10px;
+    animation: animate 2s infinite;
+}
+.arrow span:nth-child(2) {
+    animation-delay: -0.2s;
+}
+
+.arrow span:nth-child(3) {
+    animation-delay: -0.4s;
+}
+
+@keyframes animate {
+    0% {
+        opacity: 0;
+        transform: rotate(45deg) translate(-20px, -20px);
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: rotate(45deg) translate(20px, 20px);
+    }
+}
+
+.toggle{
+    position: fixed;
+    background-color: #1f1d1d;
+    color: white;
+    border-radius: 50%;
+    padding: 10px;
+    height: 50px;
+    width: 50px;
+    right: 18px;
+    bottom: 40px;
+}
+/* circle */
+
+.circle{
+    position: absolute;
+    top: -700px;
+    left: -700px;
+    height: 1000px;
+    width: 1000px;
+    background-color:rgb(248, 85, 85);
+    border-radius: 50%;
+    overflow: hidden;
+}
