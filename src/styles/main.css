@@ -2,9 +2,7 @@ html{
     scroll-behavior: smooth;
 }
 #aboutme{
-    height: 600px;
-    /* background-color: rgb(248, 85, 85); */
-    font-weight: bold;
+    height: 600px;    
     padding-left: 10px;
     container-type: size;
 }
@@ -17,7 +15,7 @@ html{
 #resume{
     height: 600px;
     padding-left: 10px;
-    /* background-color: rgb(85, 123, 248); */
+    container-type: size;
 }
 #contactme{
     height: 600px;
@@ -25,6 +23,7 @@ html{
     padding: 10px;
     display: inline-block;
     border-top-right-radius: 10px;
+    container-type: size;
     /* background-color: rgb(85, 248, 134); */
 }
 .red{
@@ -107,6 +106,7 @@ html{
     border: transparent;
     padding: 10px;
     margin-right: 10px;
+    margin-bottom: 10px;
     outline: none;
 }
 .email:focus{
@@ -183,12 +183,12 @@ bold{
 }
 .headline{
     position: relative;
-    font-size: 2em;
+    font-size: 5em;
     display: inline-block;
 }
-@container (min-width:500px){
+@container (max-width:500px){
     .headline {
-        font-size: 5em;
+        font-size: 2em;
     }
 }
 
@@ -235,8 +235,8 @@ bold{
     z-index: 99;
     top: 0;
     left: 0;
-    padding-top: 10px;
-    padding-bottom: 50px;
+    padding-top: 15px;
+    padding-bottom: 15px;
     height: 50px;
     background-color:rgb(237, 243, 248);
     color: black;
@@ -248,11 +248,8 @@ bold{
     z-index: 99;
     top: -80px;
     left: 0;
-    padding-top: 10px;
-    padding-bottom: 50px;
     height: 50px;
-    background-color:rgb(237, 243, 248);
-    color: black;
+    
     display: flex;
     justify-content: flex-end;
     transition: 0.5s; 
@@ -262,8 +259,8 @@ bold{
     z-index: 99;
     top: 0px;
     left: 0;
-    padding-top: 10px;
-    padding-bottom: 50px;
+    padding-top: 15px;
+    padding-bottom: 15px;
     height: 50px;
     background-color:rgb(237, 243, 248);
     color: black;
@@ -275,7 +272,7 @@ bold{
     transition: transform 0.5s;
     display: block;
     font-family: Roboto;
-    font-size: 40px;
+    font-size: 20px;
     font-weight: 600;
     position: relative;
     padding-right: 15px;
@@ -336,6 +333,7 @@ bold{
     width: 50px;
     right: 18px;
     bottom: 40px;
+    z-index: 99;
 }
 /* circle */
 
@@ -360,4 +358,31 @@ bold{
     border-radius: 50%;
     overflow: hidden;
     transition: 0.5s;
+}
+
+/* card for resume */
+
+.card{
+    display: inline-block;
+    width: 10em;
+    height: 10em;
+    border-radius: 10px;
+    background-color: #1f1d1d;
+    padding: 5px;
+    margin: 10px;
+    transition: 0.5s;
+}
+.card:hover{
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.img1{
+    display: inline-block;
+    position: absolute;
+    width: 10em;
+    height: 10em;
+    top: 15em;
+    right: 30em;
+
 }

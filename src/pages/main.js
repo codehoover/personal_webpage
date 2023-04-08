@@ -32,9 +32,9 @@ export default function Main() {
             
             <div className={"headbar" + hState} >
                     <a href="#aboutme" className="nav" >About Me</a><br/>
+                    <a href="#" className="nav">Projects</a>
+                    <a href="#resume" className="nav">Resume</a><br/> 
                     <a href="#contactme" className="nav">Contact</a><br/>
-                    <a href="#resume" className="nav">Resume</a><br/>
-                    <a href="#" className="nav">Projects</a> 
             </div>
 
             <span className={clicked ? "circle2":"circle"}>
@@ -53,6 +53,7 @@ export default function Main() {
 
                 <a href="https://github.com/codehoover" target="_blank" className="git"><Image src={clicked ?  "/github_white.png" : "/github.png"} width={40} height={40}/></a>
                 <a href="https://www.linkedin.com/in/esau-rahim-b7905b139/" target="_blank" className="linkedin"><Image src={clicked ? "/linkedin_white.png" : "/linkedin.png"} width={40} height={40}/></a>
+                <Image className="img1"src="/code_comp.png" width={100} height={100} alt="Computer Clip art"/>
             </div>
 
             <div className="arrow">
@@ -110,6 +111,14 @@ export default function Main() {
 
             <div id="resume">
                 <h1 className="headline">Skills and Experience</h1>
+
+                <div>
+                    <Image className="card" src="/nellie.jpg" width={100} height={100} alt="nellie"/>
+                    <Image className="card" src="/Tmu.jpg" width={100} height={100} alt="tmu"/>
+                </div>
+
+
+                
                 <p>Grab a copy of my cv!</p>
                 <a href="/Resume_EsauRahim.pdf" className="cv" download>Downloadable CV</a>
             </div>
