@@ -56,9 +56,9 @@ export default function Main() {
             </div>
 
             <div className="arrow">
-                <span></span>
-                <span></span>
-                <span></span>
+                <span style={clicked ? {borderBottom:"10px solid white", borderRight:"10px solid white"}: {borderBottom:"10px solid black", borderRight:"10px solid black"} }></span>
+                <span style={clicked ? {borderBottom:"10px solid white", borderRight:"10px solid white"}: {borderBottom:"10px solid black", borderRight:"10px solid black"} }></span>
+                <span style={clicked ? {borderBottom:"10px solid white", borderRight:"10px solid white"}: {borderBottom:"10px solid black", borderRight:"10px solid black"} }></span>
             </div>
 
             <button className="toggle" onClick={()=> setClicked(current=> !current)}>
@@ -69,45 +69,55 @@ export default function Main() {
 
             <div id="aboutme">
 
-                <h1 className="headline">About Me</h1>
-                <h2>Dedicated developer based in Canada</h2>
-                <p>
-                    Hi, welcome to my portfolio! My name is Esau and I'm a FullStack Developer located in Canada. Computer Science Graduate (BsC. Comp Sci) from Toronto Metropolitan University
-                    (formerly Ryerson University).<br/><br/>
+                <h1 className="headline">
+                    <span className="green">A</span>
+                    bo
+                    <span className="yellow">u</span>t 
+                    M<span className="red">e</span>
+                </h1>
 
-                    Sports enthusiast and avid supporter of the Toronto Raptors.
-                    I have a history of competing and excelling in both individual as well as team based athletics (see awards). <br/>
-                    Well organized, problem solver with a results oriented approach.<br/><br/>
+                <div className="aboutme_body">
+                    <h2>Dedicated developer based in Canada</h2>
+                    <p>
+                        Hi, welcome to my portfolio! My name is Esau and I'm a FullStack Developer located in Canada. Computer Science Graduate (BsC. Comp Sci) from Toronto Metropolitan University
+                        (formerly Ryerson University).<br/><br/>
 
-                    Here are a few languages and technologies I use:
+                        Sports enthusiast and avid supporter of the Toronto Raptors.
+                        I have a history of competing and excelling in both individual as well as team based athletics (see awards). <br/>
+                        Well organized, problem solver with a results oriented approach.<br/><br/>
 
-                </p><br/>
-                <div className="stack">
-                    <ul>
-                        <li>Reactjs</li>
-                        <li>Nodejs</li>
-                        <li>Expressjs</li>
-                        <li>MySQL</li>
-                        <li>PostgreSQL</li>
-                        <li>Python</li>
-                        <li>Javascript/HTML/CSS</li>
-                        <li>Java</li>
-                        <li>TypeScript</li>
-                    </ul>
+                        Here are a few languages and technologies I use:
+
+                    </p><br/>
+                    <div>
+                        <ul className="stack">
+                            <li>Reactjs</li>
+                            <li>Nodejs</li>
+                            <li>Expressjs</li>
+                            <li>MySQL</li>
+                            <li>PostgreSQL</li>
+                            <li>Python</li>
+                            <li>Javascript/HTML/CSS</li>
+                            <li>Java</li>
+                            <li>TypeScript</li>
+                        </ul>
+                    </div>
+
                 </div>
+                
             </div>
 
 
             <div id="resume">
-                <h1>Skills and Experience</h1>
-                <span className="card"></span>
+                <h1 className="headline">Skills and Experience</h1>
+                <p>Grab a copy of my cv!</p>
                 <a href="/Resume_EsauRahim.pdf" className="cv" download>Downloadable CV</a>
             </div>
             
             <div id="contactme">
                 <div className="contactme_header">
-                    <h1 style={{display:'inline-block'}}>Contact Me</h1>
-                    <Image className="team_icon" src="/team.png" width={50} height={50}/>
+                    <h1 className="headline">Cont<span className="green">a</span>ct M<span className="red">e</span></h1>
+                    <Image className="team_icon" src="/team.png" width={70} height={70}/>
                 </div>
                 
                 <p>I'm interested in freelance opportunities and connecting with likeminded individuals.
@@ -119,7 +129,7 @@ export default function Main() {
                     <input className="email" placeholder="Email"></input>
                     <input className="subject" placeholder="Subject"></input>
                     <textarea className="message" placeholder="Message"></textarea><br/>
-                    <button className="form_sub">S e n d !</button>
+                    <button className={clicked ? "form_sub_dark":"form_sub"}>S e n d !</button>
                 </form>
             </div>
 
@@ -128,7 +138,6 @@ export default function Main() {
                 <p>Remote, Canada</p> <br/>
                 <p>email: esaurahim@gmail.com</p>
             </div>
-
 
 
 
