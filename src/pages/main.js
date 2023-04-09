@@ -105,7 +105,7 @@ export default function Main() {
 
                 <div>
                     <Image className="card" src="/nellie.jpg" width={100} height={100} alt="nellie"/>
-                    <Image className="card" src="/Tmu.jpg" width={100} height={100} alt="tmu"/>
+                    <Image className="card" src="/tmu.jpg" width={100} height={100} alt="tmu"/>
                 </div>
                 Here are a few languages and technologies I use:
                 <div>
