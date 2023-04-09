@@ -59,7 +59,7 @@ html{
     background: linear-gradient(to left, transparent 50%, black 50%) right;
     background-size: 200%;
     transition: 0.5s ease-out;
-    font-family: Roboto;
+    font-family: 'Roboto Sans', sans-serif;
 }
 .form_sub_dark{
     border: rgb(255, 255, 255) solid 3px;
