@@ -140,7 +140,7 @@ html{
     font-family: Roboto;
     background-color: aliceblue;
     transition: 0.5s;
-    
+    color: black;
 }
 
 .dark-mode{
