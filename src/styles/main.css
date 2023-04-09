@@ -55,7 +55,7 @@ html{
 .form_sub{
     border: black solid 3px;
     padding: 10px;
-
+    color: black;
     background: linear-gradient(to left, transparent 50%, black 50%) right;
     background-size: 200%;
     transition: 0.5s ease-out;
