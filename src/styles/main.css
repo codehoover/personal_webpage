@@ -41,7 +41,7 @@ html{
 
 }
 .yellow{
-    color: rgb(248, 232, 85);
+    color: #FFE135;
 
 }
 .green{
@@ -225,7 +225,7 @@ bold{
     transition: transform 0.5s;
 }
 .U{
-    color: rgb(248, 232, 85);
+    color: #FFE135;
     display: inline-block;
     transition: transform 0.5s;
 }

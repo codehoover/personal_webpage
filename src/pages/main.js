@@ -101,7 +101,7 @@ export default function Main() {
 
 
             <div id="resume">
-                <h1 className="headline"><span className="blue">S</span>kill<span className="blue">s</span> <span className="green">a</span>nd <span className="red">E</span>xp<span className="blue">e</span>ri<span className="green">e</span>nc<span className="yellow">e</span></h1>
+                <h1 className="headline"><span className="blue">S</span>kill<span className="yellow">s</span> <span className="green">a</span>nd <span className="red">E</span>xp<span className="blue">e</span>ri<span className="green">e</span>nc<span className="yellow">e</span></h1>
 
                 <div>
                     <Image className="card" src="/nellie.jpg" width={100} height={100} alt="nellie"/>
