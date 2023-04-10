@@ -25,6 +25,9 @@ html{
     }
 
 }
+.aboutme_body{
+    width: 100%;
+}
 #resume{
     position: relative;
     height: 600px;
@@ -454,12 +457,6 @@ bold{
 }
 .blog_card_holder{
     display: flex;
-}
-
-.bio{
-    display: inline-block;
-    width: 40em;
-
 }
 
 .footer{

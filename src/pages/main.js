@@ -86,7 +86,7 @@ export default function Main() {
 
                     <div className="aboutme_body">
                         <h2>Dedicated developer based in Canada</h2>
-                        <p className="bio">
+                        <p>
                             Hi, welcome to my portfolio! My name is Esau and I'm a FullStack Developer located in Canada. I am a recent Computer Science Graduate (BsC. Comp Sci Hons) from Toronto Metropolitan University (formerly Ryerson University) .<br/><br/>
 
                             I regard myself as a well organized, problem solver with a results oriented approach.<br/><br/>
@@ -125,7 +125,7 @@ export default function Main() {
                     
                     <p style={{paddingBottom:"15px"}}>Grab a copy of my cv!</p>
                     <a href="/Resume_EsauRahim.pdf" className={clicked ? "button_dark":"button_sub"} download>Downloadable CV</a>
-                    
+
                 </div>
                 
                 <div id="contactme">
