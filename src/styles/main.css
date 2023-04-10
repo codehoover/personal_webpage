@@ -1,5 +1,6 @@
 html{
     scroll-behavior: smooth;
+    font-family: 'Roboto';
 }
 *{
     font-family: Roboto, sans-serif !important;
@@ -191,6 +192,7 @@ bold{
 /*interactive name */
 .intro{
     padding-top: 250px;
+    padding-bottom: 400px;
     margin-left: 10px;
     font-family: Roboto;
     height: 100vh;
