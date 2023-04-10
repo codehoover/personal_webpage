@@ -1,14 +1,22 @@
 html{
     scroll-behavior: smooth;
-    font-family: 'Roboto';
 }
 *{
     font-family: Roboto, sans-serif !important;
 }
+.main_content{
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+#Blog{
+    height: 600px;    
+    padding-bottom: 10px;
+}
 
 #aboutme{
     height: 600px;    
-    padding-left: 10px;
+    padding-bottom: 10px;
     container-type: size;
 }
 @container (max-width: 500px){
@@ -18,9 +26,10 @@ html{
 
 }
 #resume{
+    position: relative;
     height: 600px;
-    padding-left: 10px;
     container-type: size;
+    margin-bottom: 10px;
 }
 @container (max-width: 500px){
     .stack{
@@ -28,9 +37,10 @@ html{
     }
 }
 #contactme{
+    position: relative;
     height: 600px;
     width: 50%;
-    padding: 10px;
+    padding-bottom: 10px;
     display: inline-block;
     border-top-right-radius: 10px;
     container-type: size;
@@ -53,10 +63,10 @@ html{
 }
 .stack{
     display: grid;
-    grid-template-columns: repeat(3, minmax(140px, 200px));
+    grid-template-columns: repeat(3, minmax(130px, 250px));
     padding: 30px;
 }
-.form_sub{
+.button_sub{
     border: black solid 3px;
     padding: 10px;
     color: black;
@@ -65,21 +75,21 @@ html{
     transition: 0.5s ease-out;
     font-family: 'Roboto ', sans-serif !important;
 }
-.form_sub_dark{
+.button_dark{
     border: rgb(255, 255, 255) solid 3px;
     padding: 10px;
     color: white;
-
+    font-family: 'Roboto ', sans-serif !important;
     background: linear-gradient(to left, transparent 50%, rgb(255, 255, 255) 50%) right;
     background-size: 200%;
     transition: 0.5s ease-out;
-    font-family: Roboto;
+    
 }
-.form_sub:hover{
+.button_sub:hover{
     color: white;
     background-position: left;
 }
-.form_sub_dark:hover{
+.button_dark:hover{
     color: rgb(0, 0, 0);
     background-position: left;
 }
@@ -390,8 +400,9 @@ bold{
     transition: 0.5s;
 }
 .card:hover{
-    opacity: 0;
-    transition: 0.5s;
+    width: 11em;
+    height: 11em;
+    transition: 1s;
 }
 
 .img1{
@@ -404,8 +415,56 @@ bold{
 
 }
 
+/* blog posts */
+.tagline_features{
+    color: #FD2155;
+}
+.card_image{
+    display: inline-block;
+    position: relative;
+    border: white 1px solid;
+    border-radius: 50%;
+    margin-top: 10px;
+}
+.title{
+    color: white;
+    text-align: center;
+    padding: 10px;
+    display: inline-block;
+}
+.description{
+    color: rgb(206, 206, 206);
+}
+.blog_card{
+    position: relative;
+    display: inline-block;
+    padding: 10px;
+    margin: 10px;
+    height: 15em;
+    width: 15em;
+    background-color: rgb(71, 71, 71);
+    border: 2px #FD2155 solid;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+.blog_card:hover{
+    transition: 1s;
+    border: 2px #ffc0cf solid;
+    box-shadow: 0px 1px 2px rgba(0,0,0,0.1);
+}
+.blog_card_holder{
+    display: flex;
+}
+
+.bio{
+    display: inline-block;
+    width: 40em;
+
+}
+
 .footer{
     font-size: 12px;
     text-align: center;
     padding-bottom: 10px;
 }
+
