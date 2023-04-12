@@ -25,6 +25,47 @@ export default function Main() {
     }, []);
 
 
+    //handles form submission
+    const handleSubmit = async (event) => {
+        // Stop the form from submitting and refreshing the page.
+        event.preventDefault()
+    
+        // Get data from the form.
+        const data = {
+          name: event.target.name.value,
+          email: event.target.email.value,
+          subject: event.target.subject.value,
+          message: event.target.message.value,
+        }
+    
+        // Send the data to the server in JSON format.
+        const JSONdata = JSON.stringify(data)
+    
+        // API endpoint where we send form data.
+        const endpoint = '/api/form'
+    
+        // Form the request for sending data to the server.
+        const options = {
+          // The method is POST because we are sending data.
+          method: 'POST',
+          // Tell the server we're sending JSON.
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          // Body of the request is the JSON data we created above.
+          body: JSONdata,
+        }
+    
+        // Send the form data to our forms API on Vercel and get a response.
+        const response = await fetch(endpoint, options)
+    
+        // Get the response data from server as JSON.
+        // If server returns the name submitted, that means the form works.
+        const result = await response.json()
+        alert(`Form submitted: ${result.data}`)
+      }
+
+
     return (
         
         
@@ -127,59 +168,44 @@ export default function Main() {
                     <a href="/Resume_EsauRahim.pdf" className={clicked ? "button_dark":"button_sub"} download>Downloadable CV</a>
 
                 </div>
+
+
                 
                 <div id="contactme">
+                    <div className="location">
+                                <p>Esau Rahim</p>
+                                <p>Location 1: Winnipeg, Manitoba, Canada</p>
+                                <p>Location 2: Toronto, Ontario, Canada</p> <br/>
+                                <p>email: esaurahim@gmail.com</p>
+                    </div>
+                    
                     <div className="contactme_header">
                         <h1 className="headline">Cont<span className="green">a</span>ct M<span className="red">e</span></h1>
                         <Image className="team_icon" src="/team.png" width={70} height={70} alt="team icon"/>
+
                     </div>
                     
-                    <p>I'm interested in work opportunities and connecting with likeminded individuals.
-                        If you have any questions regarding my portfolio or want to connect feel free to reach me below!
-                    </p>
 
-                    <form className="fillable">
-                        <input className="name" placeholder="Name"></input>
-                        <input className="email" placeholder="Email"></input>
-                        <input className="subject" placeholder="Subject"></input>
-                        <textarea className="message" placeholder="Message"></textarea><br/>
-                        <button className={clicked ? "button_dark":"button_sub"}>S e n d !</button>
+
+                    <form className="fillable" onSubmit={handleSubmit}>
+                        <p>I'm interested in work opportunities and connecting with likeminded individuals.
+                            If you have any questions regarding my portfolio or want to connect feel free to reach me below!
+                        </p><br/>
+                        <input className="name" id="name" placeholder="Name" required minLength={4}/>
+                        <input className="email" id="email" placeholder="Email" required minLength={8}/>
+                        <input className="subject" id="subject" placeholder="Subject" required minLength={1}/>
+                        <textarea className="message" id="message" placeholder="Message" required minLength={10}/><br/>
+                        <button className={clicked ? "button_dark":"button_sub"} type="submit">S e n d !</button>
                     </form>
-                </div>
-
-                <div className="location">
-                    <p>Esau Rahim</p>
-                    <p>Location 1: Winnipeg, Manitoba, Canada</p>
-                    <p>Location 2: Toronto, Ontario, Canada</p> <br/>
-                    <p>email: esaurahim@gmail.com</p>
-                </div>
-
-                <div id="Blog">
-
-                    <h1 className="headline">Blog</h1>
-                    <p>Here are some how-tos and explanations on features and functions I implemented into my webpage!</p>
-                    <div className="blog_card_holder">
-                        <a className="blog_card" href="#Blog">
-                            <h4 className="tagline_features">Features & Functions</h4>
-                            <Image className="card_image"src="/dark_mode.png" height={40} width={40} alt="dark mode image"/>
-                            <h3 className="title"> Dark/light mode</h3> 
-                            <p className="description"> Learn how to easily create dark and light themes for your webpage!</p>
-                        </a>
-
-                        <a className="blog_card" href="#Blog">
-                            <h4 className="tagline_features">Features & Functions</h4>
-                            <h3 className="title"> Hiding Nav Bar</h3>
-                            <p className="description"> How I created a hiding Navigation Bar for my webpage</p>
-                        </a>
-                    </div>
-
 
                 </div>
-
-                <div className="footer">
-                    <p>Designed & Built by Esau Rahim</p>
-                </div>
+                
             </div>
+
+            <div className="footer">
+                    <p>Designed & Built by Esau Rahim</p>
+            </div>
+
         </div>
     );
 }

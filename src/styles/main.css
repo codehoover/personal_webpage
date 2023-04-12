@@ -1,32 +1,31 @@
 html{
     scroll-behavior: smooth;
+
 }
 *{
     font-family: Roboto, sans-serif !important;
 }
 .main_content{
-    padding-right: 10px;
-    padding-left: 10px;
-}
-
-#Blog{
-    height: 600px;    
-    padding-bottom: 10px;
+    margin-right: 10px !important;
+    margin-left: 10px;
+    width: 90% !important;
 }
 
 #aboutme{
-    height: 600px;    
+    height: 400px;    
     padding-bottom: 10px;
+    position: relative;
     container-type: size;
 }
 @container (max-width: 500px){
     .aboutme_body{
-        font-size: 0.7em;
+        font-size: 1em;
     }
 
 }
 .aboutme_body{
-    width: 100%;
+    width: 70%;
+    margin-right: 100px;
 }
 #resume{
     position: relative;
@@ -34,7 +33,7 @@ html{
     container-type: size;
     margin-bottom: 10px;
 }
-@container (max-width: 500px){
+@container (max-width: 600px){
     .stack{
         font-size: 0.7em
     }
@@ -42,12 +41,14 @@ html{
 #contactme{
     position: relative;
     height: 600px;
-    width: 50%;
-    padding-bottom: 10px;
-    display: inline-block;
-    border-top-right-radius: 10px;
+    margin-bottom: 50px;
     container-type: size;
-    /* background-color: rgb(85, 248, 134); */
+}
+@container (max-width: 500px){
+    p{
+        font-size: 0.7em
+    }
+
 }
 .red{
     color: rgb(248, 85, 85);
@@ -104,16 +105,25 @@ html{
 
 }
 .location{
-    position: absolute;
+    position: relative;
     display: inline-block;
     padding: 10px;
+    margin: 10px;
+    width: 20em;
+    height: 9em;
+    right: 0px;
     background-color: #2c2b2b;
     color: white;
 }
 .fillable{
     font-family: Roboto;
-    color: red;
     padding-top: 10px;
+    width: 50%;
+    display: inline-block;
+
+}
+input:invalid:focus{
+    outline: rgb(248, 85, 85) solid 1px;
 
 }
 .name{
@@ -122,6 +132,7 @@ html{
     padding: 10px;
     margin-right: 10px;
     margin-bottom: 10px;
+    width: 190px;
     outline: none;
 }
 .email{
@@ -130,26 +141,25 @@ html{
     padding: 10px;
     margin-right: 10px;
     margin-bottom: 10px;
+    width: 190px;
     outline: none;
-}
-.email:focus{
-    border-color: red;
-    border-width: 10px;
 }
 .message{
     display: block;
     border: transparent;
     padding: 10px;
     height: 10vh;
-    width: 390px;
+    width:150%;
+    max-width: 390px;
     outline: none;
     font-family: Roboto;
 }
 .subject{
     display: block;
     border: transparent;
-    width: 390px;
     padding: 10px;
+    width: 150%;
+    max-width: 390px;
     margin-bottom: 10px;
     outline: none;
 }
@@ -196,10 +206,7 @@ html{
     margin-left: 15px;
     margin-right: 5vw;
 }
-bold{
-    font-weight: bold;
-    font-size: 20px;
-}
+
 
 
 /*interactive name */
@@ -356,14 +363,21 @@ bold{
 .toggle{
     position: fixed;
     background-color: #1f1d1d;
+    opacity: 0.5;
     color: white;
     border-radius: 50%;
+    border: gainsboro 1px solid;
     padding: 10px;
     height: 50px;
     width: 50px;
     right: 18px;
     bottom: 40px;
     z-index: 99;
+    transition: 0.25s;
+}
+.toggle:hover{
+    opacity: 1;
+    transition: 0.5s;
 }
 /* circle */
 
@@ -418,50 +432,12 @@ bold{
 
 }
 
-/* blog posts */
-.tagline_features{
-    color: #FD2155;
-}
-.card_image{
-    display: inline-block;
-    position: relative;
-    border: white 1px solid;
-    border-radius: 50%;
-    margin-top: 10px;
-}
-.title{
-    color: white;
-    text-align: center;
-    padding: 10px;
-    display: inline-block;
-}
-.description{
-    color: rgb(206, 206, 206);
-}
-.blog_card{
-    position: relative;
-    display: inline-block;
-    padding: 10px;
-    margin: 10px;
-    height: 15em;
-    width: 15em;
-    background-color: rgb(71, 71, 71);
-    border: 2px #FD2155 solid;
-    border-radius: 10px;
-    transition: 0.5s;
-}
-.blog_card:hover{
-    transition: 1s;
-    border: 2px #ffc0cf solid;
-    box-shadow: 0px 1px 2px rgba(0,0,0,0.1);
-}
-.blog_card_holder{
-    display: flex;
-}
 
 .footer{
     font-size: 12px;
-    text-align: center;
-    padding-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 50px;
 }
 
