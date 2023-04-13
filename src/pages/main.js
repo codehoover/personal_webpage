@@ -65,7 +65,6 @@ export default function Main() {
         alert(`Form submitted: ${result.data}`)
       }
 
-
     return (
         
         
@@ -171,14 +170,7 @@ export default function Main() {
 
 
                 
-                <div id="contactme">
-                    <div className="location">
-                                <p>Esau Rahim</p>
-                                <p>Location 1: Winnipeg, Manitoba, Canada</p>
-                                <p>Location 2: Toronto, Ontario, Canada</p> <br/>
-                                <p>email: esaurahim@gmail.com</p>
-                    </div>
-                    
+                <div id="contactme">                    
                     <div className="contactme_header">
                         <h1 className="headline">Cont<span className="green">a</span>ct M<span className="red">e</span></h1>
                         <Image className="team_icon" src="/team.png" width={70} height={70} alt="team icon"/>
@@ -195,16 +187,32 @@ export default function Main() {
                         <input className="email" id="email" placeholder="Email" required minLength={8}/>
                         <input className="subject" id="subject" placeholder="Subject" required minLength={1}/>
                         <textarea className="message" id="message" placeholder="Message" required minLength={10}/><br/>
-                        <button className={clicked ? "button_dark":"button_sub"} type="submit">S e n d !</button>
+                        <button className={clicked ? "button_dark":"button_sub"} type="submit" >S e n d !</button>
+
                     </form>
 
                 </div>
-                
+
+                <div id="projects">                    
+                    <div className="Project">
+                        <h1 className="headline">Projects</h1>
+                    </div>
+                        <br/><p>Here are some things I've created!</p><br/>
+                        
+                        <div className="project_card">
+                            <div className="card_inner">
+
+                            </div>
+                        </div>
+                        <div className="project_card"></div>
+
+                </div>
+
             </div>
 
-            <div className="footer">
+            <footer className="footer">
                     <p>Designed & Built by Esau Rahim</p>
-            </div>
+            </footer>
 
         </div>
     );

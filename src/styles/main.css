@@ -24,7 +24,7 @@ html{
 
 }
 .aboutme_body{
-    width: 70%;
+    width: 100%;
     margin-right: 100px;
 }
 #resume{
@@ -38,6 +38,14 @@ html{
         font-size: 0.7em
     }
 }
+
+#projects{
+    height: 600px;    
+    padding-bottom: 10px;
+    position: relative;
+    container-type: size;
+}
+
 #contactme{
     position: relative;
     height: 600px;
@@ -78,6 +86,7 @@ html{
     background-size: 200%;
     transition: 0.5s ease-out;
     font-family: 'Roboto ', sans-serif !important;
+    cursor: pointer;
 }
 .button_dark{
     border: rgb(255, 255, 255) solid 3px;
@@ -87,6 +96,7 @@ html{
     background: linear-gradient(to left, transparent 50%, rgb(255, 255, 255) 50%) right;
     background-size: 200%;
     transition: 0.5s ease-out;
+    cursor: pointer;
     
 }
 .button_sub:hover{
@@ -104,17 +114,7 @@ html{
     bottom: -10px;
 
 }
-.location{
-    position: relative;
-    display: inline-block;
-    padding: 10px;
-    margin: 10px;
-    width: 20em;
-    height: 9em;
-    right: 0px;
-    background-color: #2c2b2b;
-    color: white;
-}
+
 .fillable{
     font-family: Roboto;
     padding-top: 10px;
@@ -164,17 +164,17 @@ input:invalid:focus{
     outline: none;
 }
 .body{
-    font-family: Roboto;
     background-color: aliceblue;
     transition: 0.5s;
     color: black;
+    display: grid;
 }
 
 .dark-mode{
     background-color: #1f1d1d;
     color: white;
     height: 100%;
-    font-family: Roboto;
+    display: grid;
     transition: 0.5s;
     
 }
@@ -379,8 +379,8 @@ input:invalid:focus{
     opacity: 1;
     transition: 0.5s;
 }
-/* circle */
 
+/* circle */
 .circle{
     position: absolute;
     top: -700px;
@@ -405,7 +405,6 @@ input:invalid:focus{
 }
 
 /* card for resume */
-
 .card{
     display: inline-block;
     width: 10em;
@@ -433,11 +432,28 @@ input:invalid:focus{
 }
 
 
+/* project cards */
+.project_card{
+    background-color: transparent;
+    width: 250px;
+    height: 250px;
+    border-radius: 10px;
+    border: 1px rgb(85, 248, 134) solid;
+    display: inline-block;
+    margin: 10px;
+}
+.card_inner{
+
+}
+
+
 .footer{
     font-size: 12px;
-    display: flex;
-    justify-content: center;
+    display: block;
+    position: relative;
+    text-align: center;
     width: 100%;
     height: 50px;
+    padding: 40px;
 }
 
