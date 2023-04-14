@@ -448,7 +448,7 @@ input:invalid:focus{
     height: 250px;
     border-radius: 5px;
     padding: 10px;
-    border: 1px rgb(248, 85, 85) solid;
+    border: 1px white solid;
     display: inline-block;
     transition: 0.5s;
 }
