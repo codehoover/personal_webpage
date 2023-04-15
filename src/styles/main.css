@@ -445,7 +445,6 @@ input:invalid:focus{
     gap: 15px;
     color: white;
     
-
 }
 
 /* project cards */
@@ -517,6 +516,11 @@ input:invalid:focus{
     transform: scale(10);
     transition: 0.5s;
     overflow: hidden;
+}
+
+.project_card:hover{
+    transform: translateY(-5px);
+    transition: 0.5s;
 }
 
 
