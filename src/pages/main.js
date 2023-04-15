@@ -202,16 +202,17 @@ export default function Main() {
 
                         <div className="project_grid">
                             <div className="project_card">
+                            <div className="pro_bg"></div>
                                 <div className="card_inner">
 
                                     <div className="project_header">
                                         <div className="project_folder">
-                                            <Image src={clicked ? "/web_light.png":"/web_dark.png"} width={50} height={50} alt="project link"/>
+                                            <Image src={"/web_light.png"} width={50} height={50} alt="project link"/>
                                         </div>
 
                                         <div className="project_link">
                                             <a href="https://github.com/codehoover/plantdb" target="_blank">
-                                                <Image src={clicked ? "/link_light.png":"/link_dark.png"} width={25} height={25} alt="project link"/>
+                                                <Image src={ "/link_light.png"} width={25} height={25} alt="project link"/>
                                             </a>
                                         </div>
                                     </div>
@@ -224,16 +225,17 @@ export default function Main() {
                             </div>
 
                             <div className="project_card">
+                                <div className="pro_bg"></div>
                                 <div className="card_inner">
 
                                     <div className="project_header">
                                         <div className="project_folder">
-                                            <Image src={clicked ? "/web_light.png":"/web_dark.png"} width={50} height={50} alt="project link"/>
+                                            <Image src={"/web_light.png"} width={50} height={50} alt="project link"/>
                                         </div>
 
                                         <div className="project_link">
                                             <a href="https://github.com/codehoover/plantdb" target="_blank">
-                                                <Image src={clicked ? "/link_light.png":"/link_dark.png"} width={25} height={25} alt="project link"/>
+                                                <Image src={"/link_light.png"} width={25} height={25} alt="project link"/>
                                             </a>
                                         </div>
                                     </div>
@@ -244,6 +246,31 @@ export default function Main() {
 
                                 </div>
                             </div>
+
+                            <div className="project_card">
+                                <div className="pro_bg"></div>
+                                <div className="card_inner">
+
+                                    <div className="project_header">
+                                        <div className="project_folder">
+                                            <Image src={"/web_light.png"} width={50} height={50} alt="project link"/>
+                                        </div>
+
+                                        <div className="project_link">
+                                            <a href="https://github.com/codehoover/plantdb" target="_blank">
+                                                <Image src={"/link_light.png"} width={25} height={25} alt="project link"/>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <h3 className="project_title"> title</h3>
+
+                                    <p className="project_body"> Description</p>
+
+                                </div>
+                            </div>
+
+
 
                             
 

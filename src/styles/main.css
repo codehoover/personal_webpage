@@ -40,7 +40,7 @@ html{
 }
 
 #projects{
-    height: 900px;    
+    height: 1200px;    
     padding-bottom: 10px;
     position: relative;
     container-type: size;
@@ -57,6 +57,10 @@ html{
         font-size: 0.7em
     }
 
+}
+.contactme_header{
+    display: flex;
+    align-items: center;
 }
 .red{
     color: rgb(248, 85, 85);
@@ -168,6 +172,7 @@ input:invalid:focus{
     transition: 0.5s;
     color: black;
     display: grid;
+
 }
 
 .dark-mode{
@@ -435,31 +440,54 @@ input:invalid:focus{
 
 .project_grid{
     display: grid;
-    margin: 50px;
+    
     grid-template-columns: repeat(auto-fill, minmax(300px,1fr));
     gap: 15px;
+    color: white;
+    
 
 }
 
 /* project cards */
 .project_card{
-    background-color: transparent;
-    width: 250px;
+    background: #121212;
+    background-size: 200%;
+    width: 90%;
     height: 250px;
-    border-radius: 5px;
+    border-radius: 20px;
     padding: 10px;
-    border: 1px white solid;
+    position: relative;
+    
     display: inline-block;
     transition: 0.5s;
-}
-.card_inner{
-
     
+    overflow: hidden;
+}
+.pro_bg{
+    height: 128px;
+    width: 128px;
+    background-color: #ffbc48;
+    position: absolute;
+    top: -60px;
+    right: -60px;
+    z-index: 1;
+    border-radius: 50%;
+    
+    transition: .5s ease;
+
+}
+.project_card:nth-child(2n) .pro_bg{
+    background-color: rgb(248, 85, 85);
+}
+.project_card:nth-child(3n) .pro_bg{
+    background-color: rgb(85, 248, 134);
 }
 .project_header{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
+    z-index: 2;
     margin-bottom: 35px;
 }
 .project_link{
@@ -473,16 +501,25 @@ input:invalid:focus{
 .project_title{
     font-weight: bolder;
     text-align: center;
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
 }
 
 .project_body{
+    position: relative;
+    z-index: 2;
     
 }
 
-.project_card:hover{
-    transform: translateY(-5px);
+.project_card:hover .pro_bg{
+    
+    transform: scale(10);
     transition: 0.5s;
+    overflow: hidden;
 }
+
+
 .footer{
     font-size: 12px;
     display: block;
@@ -494,4 +531,3 @@ input:invalid:focus{
     background-color:  #ffbc48;
 
 }
-
