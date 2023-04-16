@@ -81,7 +81,41 @@ export default function Main() {
             </span>
 
             <div className="main_content">
+            <div id="particle-conatiner">
+                        <div className="particle"></div>
+                        <div className="particle"></div>
+                        <div className="particle"></div>
+                        <div className="particle"></div>
+                        <div className="particle"></div>
+                        <div className="particle"></div>
+                        <div className="particle"></div>
+                        <div className="particle"></div>
+                        <div className="particle"></div>
+                        <div className="particle"></div>
+                        <div className="particle"></div>
+                        <div className="particle"></div>
+                        <div className="particle"></div>
+                        <div className="particle"></div>
+                        <div className="particle"></div>
+                        <div className="particle"></div>
+                        <div className="particle"></div>
+                        <div className="particle"></div>
+                        <div className="particle"></div>
+                        <div className="particle"></div>
+                        <div className="particle"></div>
+                        <div className="particle"></div>
+                        <div className="particle"></div>
+                        <div className="particle"></div>
+                        <div className="particle"></div>
+                        <div className="particle"></div>
+                        <div className="particle"></div>
+                        <div className="particle"></div>
+                        <div className="particle"></div>
+                        <div className="particle"></div>
+                    </div>
+
                 <div className="intro">
+                    
                     <h1 className="headline">
                         Hi! I'm <span className="E">E</span>
                         <span className="S">s</span>
@@ -102,11 +136,11 @@ export default function Main() {
 
                 </div>
 
-                <div className="arrow">
+                {/* <div className="arrow">
                     <span style={clicked ? {borderBottom:"10px solid white", borderRight:"10px solid white"}: {borderBottom:"10px solid black", borderRight:"10px solid black"} }></span>
                     <span style={clicked ? {borderBottom:"10px solid white", borderRight:"10px solid white"}: {borderBottom:"10px solid black", borderRight:"10px solid black"} }></span>
                     <span style={clicked ? {borderBottom:"10px solid white", borderRight:"10px solid white"}: {borderBottom:"10px solid black", borderRight:"10px solid black"} }></span>
-                </div>
+                </div> */}
 
                 <button className="toggle" onClick={()=> setClicked(current=> !current)}>
                     <Image src={clicked ? "/light_mode.png" : "/dark_mode.png"}
@@ -219,7 +253,7 @@ export default function Main() {
 
                                     <h3 className="project_title"> Plantdb</h3>
 
-                                    <p className="project_body"> Built a CRUD application using Next.js and Postgresql</p>
+                                    <p className="project_body"> Built a CRUD application using Next.js and Postgresql. Deployed on Vercel</p>
 
                                 </div>
                             </div>
