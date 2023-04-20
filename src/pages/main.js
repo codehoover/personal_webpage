@@ -114,25 +114,28 @@ export default function Main() {
                         <div className="particle"></div>
                     </div>
 
-                <div className="intro">
-                    
+                <div id="landing_page">
+
+                    <div>
                     <h1 className="headline">
                         Hi! I'm <span className="E">E</span>
                         <span className="S">s</span>
                         <span className="A">a</span>
                         <span className="U">u</span>,<br/> 
-                        A Software Developer.
+                        A Software Developer.                      
+                    </h1>
 
-                        <div className="circle_anim">
-                        </div>
-                        
-                    </h1><br/>
-                    
+                                        
                     <h2 className="subheading">Passionate Developer based in Canada</h2><br/>
 
                     <a href="https://github.com/codehoover" target="_blank" className="git"><Image src={clicked ?  "/github_white.png" : "/github.png"} width={40} height={40} alt="github link"/></a>
                     <a href="https://www.linkedin.com/in/esau-rahim-b7905b139/" target="_blank" className="linkedin"><Image src={clicked ? "/linkedin_white.png" : "/linkedin.png"} width={40} height={40} alt="linkedin profile link"/></a>
-                    
+
+                    </div>
+    
+                    <div className="logo">
+                        <h2>  "L O G O" </h2>
+                    </div>
 
                 </div>
 
@@ -149,7 +152,7 @@ export default function Main() {
                     alt="light/dark mode toggle"/>
                 </button>
 
-                <div id="aboutme">
+                <div id="container">
 
                     <h1 className="headline">
                         <span className="green">A</span>
@@ -165,7 +168,7 @@ export default function Main() {
 
                             I regard myself as a well organized, problem solver with a results oriented approach.<br/><br/>
 
-                            Outside of programming I am a movie connoisseur, sports enthusiast and avid supporter of the Toronto Raptors.
+                            Outside of programming I am a movie connoisseur, sports enthusiast and avid supporter of the Toronto Raptors!
                             If you would like to see my past awards in athletics as well as academics please see <a href="#">Awards</a>. <br/>
                             <br/><br/>
                         </p><br/>
@@ -175,7 +178,7 @@ export default function Main() {
                 </div>
 
 
-                <div id="resume">
+                <div id="container">
                     <h1 className="headline"><span className="blue">S</span>kill<span className="yellow">s</span> <span className="green">a</span>nd <span className="red">E</span>xp<span className="blue">e</span>ri<span className="green">e</span>nc<span className="yellow">e</span></h1>
 
                     <div>
@@ -198,13 +201,16 @@ export default function Main() {
                         </div>
                     
                     <p style={{paddingBottom:"15px"}}>Grab a copy of my cv!</p>
+                    <div>
                     <a href="/Resume_EsauRahim.pdf" className={clicked ? "button_dark":"button_sub"} download>Downloadable CV</a>
+                    </div>
+
 
                 </div>
 
 
                 
-                <div id="contactme">                    
+                <div id="container">                    
                     <div className="contactme_header">
                         <h1 className="headline">Cont<span className="green">a</span>ct M<span className="red">e</span></h1>
                         <Image className="team_icon" src="/team.png" width={70} height={70} alt="team icon"/>
@@ -251,7 +257,7 @@ export default function Main() {
                                         </div>
                                     </div>
 
-                                    <h3 className="project_title"> Plantdb</h3>
+                                    <h3 className="project_title"> Plantdb</h3><br/>
 
                                     <p className="project_body"> Built a CRUD application using Next.js and Postgresql. Deployed on Vercel</p>
 
@@ -268,15 +274,15 @@ export default function Main() {
                                         </div>
 
                                         <div className="project_link">
-                                            <a href="https://github.com/codehoover/plantdb" target="_blank">
+                                            <a href="https://github.com/codehoover/Weather_app" target="_blank">
                                                 <Image src={"/link_light.png"} width={25} height={25} alt="project link"/>
                                             </a>
                                         </div>
                                     </div>
 
-                                    <h3 className="project_title"> title</h3>
+                                    <h3 className="project_title"> Weather App </h3><br/>
 
-                                    <p className="project_body"> Description</p>
+                                    <p className="project_body"> Created an application in HTML, CSS, and JavaScript which pulls data from the openweather API to display the current weather of a select city.</p>
 
                                 </div>
                             </div>

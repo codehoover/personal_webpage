@@ -11,44 +11,22 @@ html{
     margin-right: 10px !important;
     margin-left: 10px;
     width: 90% !important;
+    display: flex;
+    flex-direction: column;
 }
 
-#aboutme{
-    height: 400px;    
-    padding-bottom: 10px;
+#landing_page{
     position: relative;
-    container-type: size;
-}
-@container (max-width: 500px){
-    .aboutme_body{
-        font-size: 1em;
-    }
-
-}
-.aboutme_body{
-    width: 100%;
-    margin-right: 100px;
-}
-#resume{
-    position: relative;
-    height: 600px;
-    container-type: size;
-    margin-bottom: 10px;
-}
-@container (max-width: 600px){
-    .stack{
-        font-size: 0.7em
-    }
-}
-
-#projects{
-    height: 1200px;    
-    padding-bottom: 10px;
-    position: relative;
+    height: 100vh;
+    margin-bottom: 50px;
+    padding-top: 250px;
+    padding-bottom: 400px;
     container-type: size;
 }
 
-#contactme{
+#container{
+    display: flex;
+    flex-direction: column;
     position: relative;
     height: 600px;
     margin-bottom: 50px;
@@ -56,10 +34,20 @@ html{
 }
 @container (max-width: 500px){
     p{
+        font-size: 0.9em
+    }
+    .stack{
         font-size: 0.7em
     }
 
 }
+
+.aboutme_body{
+    width: 100%;
+    margin-right: 100px;
+}
+
+
 .contactme_header{
     display: flex;
     align-items: center;
@@ -91,14 +79,12 @@ html{
     background: linear-gradient(to left, transparent 50%, black 50%) right;
     background-size: 200%;
     transition: 0.5s ease-out;
-    font-family: 'Roboto ', sans-serif !important;
     cursor: pointer;
 }
 .button_dark{
     border: rgb(255, 255, 255) solid 3px;
     padding: 10px;
     color: white;
-    font-family: 'Roboto ', sans-serif !important;
     background: linear-gradient(to left, transparent 50%, rgb(255, 255, 255) 50%) right;
     background-size: 200%;
     transition: 0.5s ease-out;
@@ -215,16 +201,13 @@ input:invalid:focus{
 }
 
 
+#particle-container{
+    z-index: 1;
+}
+
 
 /*interactive name */
-.intro{
-    padding-top: 250px;
-    padding-bottom: 400px;
-    margin-left: 10px;
-    font-family: Roboto;
-    height: 100vh;
-    container-type: size;
-}
+
 .headline{
     position: relative;
     font-size: 5em;
@@ -398,6 +381,7 @@ input:invalid:focus{
     border-radius: 50%;
     overflow: hidden;
     transition: 0.5s;
+    z-index: 2;
 }
 .circle2{
     position: absolute;
@@ -409,6 +393,7 @@ input:invalid:focus{
     border-radius: 50%;
     overflow: hidden;
     transition: 0.5s;
+    z-index: 2;
 }
 
 /* card for resume */
@@ -438,6 +423,14 @@ input:invalid:focus{
 
 }
 
+
+#projects{
+    display: flex;
+    flex-direction: column;
+    min-height: 600px;
+    margin-bottom: 50px;
+    container-type: inline-size;
+}
 
 
 .project_grid{
@@ -525,6 +518,26 @@ input:invalid:focus{
     transition: 0.5s;
 }
 
+
+.logo{
+    display: inline-block;
+    position: absolute;
+    right: 400px;
+    top: 400px;
+    animation: float 5s infinite ease;
+}
+
+@keyframes float {
+    0%{
+        transform: translateY(10px);
+    }
+    50%{
+        transform: translateY(0px);
+    }
+    100%{
+        transform: translateY(10px);
+    }
+}
 
 .footer{
     font-size: 12px;

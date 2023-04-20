@@ -1,8 +1,11 @@
 @for $i from 1 through 30{
     @keyframes particle-animation-#{$i}{
-    100%{
+      0%{opacity: 0.5;}
+    50%{
     transform: translate3d((random(90) * 1vw), (random(90) * 1vh), (random(100) * 1px));
+    
     }
+    100%{opacity: 0.5;}
   } 
     
     .particle:nth-child(#{$i}){
@@ -12,6 +15,7 @@
    width: $size;
    opacity: random(100)/100;
    animation-delay: -$i *.2s;
+   transition: ease 1s;
    background: hsl(random(360), 70%, 50%);
    transform: translate3d((random(90) * 1vw), (random(90) * 1vh), (random(100) * 1px));
     }
