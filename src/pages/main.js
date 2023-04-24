@@ -2,7 +2,16 @@ import { Content } from "next/font/google";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
+const initValues = {
+    name:"",
+    email:"",
+    subject:"",
+    message:"",
+}
+const initState = {values: initValues}
+
 export default function Main() {
+
     const [clicked, setClicked] = useState(false);
 
     const [hState, sethState] = useState("top");
@@ -24,52 +33,19 @@ export default function Main() {
         };
     }, []);
 
+    // form validation
+    
 
-    //handles form submission
-    const handleSubmit = async (event) => {
-        // Stop the form from submitting and refreshing the page.
-        event.preventDefault()
-    
-        // Get data from the form.
-        const data = {
-          name: event.target.name.value,
-          email: event.target.email.value,
-          subject: event.target.subject.value,
-          message: event.target.message.value,
-        }
-    
-        // Send the data to the server in JSON format.
-        const JSONdata = JSON.stringify(data)
-    
-        // API endpoint where we send form data.
-        const endpoint = '/api/form'
-    
-        // Form the request for sending data to the server.
-        const options = {
-          // The method is POST because we are sending data.
-          method: 'POST',
-          // Tell the server we're sending JSON.
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          // Body of the request is the JSON data we created above.
-          body: JSONdata,
-        }
-    
-        // Send the form data to our forms API on Vercel and get a response.
-        const response = await fetch(endpoint, options)
-    
-        // Get the response data from server as JSON.
-        // If server returns the name submitted, that means the form works.
-        const result = await response.json()
-        alert(`Form submitted: ${result.data}`)
-      }
+    const [state, setState] = useState(initState);
+    const {values} = state;
+
+
 
     return (
         
         
         <div className={clicked ? "dark-mode" : "body"}>
-            
+        
             <div className={"headbar" + hState} >
                     <a href="#aboutme" className="nav" >About Me</a>
                     <a href="#resume" className="nav">Work</a>
@@ -81,7 +57,8 @@ export default function Main() {
             </span>
 
             <div className="main_content">
-            <div id="particle-conatiner">
+
+                <div id="particle-conatiner">
                         <div className="particle"></div>
                         <div className="particle"></div>
                         <div className="particle"></div>
@@ -112,7 +89,7 @@ export default function Main() {
                         <div className="particle"></div>
                         <div className="particle"></div>
                         <div className="particle"></div>
-                    </div>
+                </div>
 
                 <div id="landing_page">
 
@@ -152,9 +129,9 @@ export default function Main() {
                     alt="light/dark mode toggle"/>
                 </button>
 
-                <div id="container">
+                <div id="aboutme" className="container">
 
-                    <h1 className="headline">
+                    <h1 className="subheadline">
                         <span className="green">A</span>
                         bo
                         <span className="yellow">u</span>t 
@@ -177,57 +154,73 @@ export default function Main() {
                     
                 </div>
 
-
-                <div id="container">
-                    <h1 className="headline"><span className="blue">S</span>kill<span className="yellow">s</span> <span className="green">a</span>nd <span className="red">E</span>xp<span className="blue">e</span>ri<span className="green">e</span>nc<span className="yellow">e</span></h1>
+                <div id="resume" className="container">
+                    <h1 className="subheadline"><span className="blue">S</span>kill<span className="yellow">s</span> <span className="green">a</span>nd <span className="red">E</span>xp<span className="blue">e</span>ri<span className="green">e</span>nc<span className="yellow">e</span></h1>
 
                     <div>
                         <Image className="card" src="/nellie.jpg" width={100} height={100} alt="nellie"/>
                         <Image className="card" src="/tmu.jpg" width={100} height={100} alt="tmu"/>
                     </div>
+
                     Here are a few languages and technologies I use:
                     <div>
-                            <ul className="stack">
-                                <li>Reactjs</li>
-                                <li>Nodejs</li>
-                                <li>Expressjs</li>
-                                <li>MySQL</li>
-                                <li>PostgreSQL</li>
-                                <li>Python</li>
-                                <li>Javascript/HTML/CSS</li>
-                                <li>Java</li>
-                                <li>TypeScript</li>
-                            </ul>
+                        <ul className="stack">
+                            <li>Reactjs</li>
+                            <li>Nodejs</li>
+                            <li>Expressjs</li>
+                            <li>MySQL</li>
+                            <li>PostgreSQL</li>
+                            <li>Python</li>
+                            <li>Javascript/HTML/CSS</li>
+                            <li>Java</li>
+                            <li>TypeScript</li>
+                        </ul>
+                    </div>
+
+                    <div className="orbit-container">
+                        <div className="center-circle">
+                            <Image src="/code.svg" height={50} width={50} alt="code image"/>
+
                         </div>
+                        <div className="inner-orbit">
+                            <span className="inner-orbit-circle"> <Image src="/reactjs-icon.svg" width={40} height={40}/></span>
+                        </div>
+                        <div className="middle-orbit">
+                            <span className="middle-orbit-circle"> <Image src="/html.svg" width={40} height={40}/></span>
+                            <span > <Image src="/js.svg" width={40} height={40}/></span>
+                            <span > <Image src="/css3.svg" width={40} height={40}/></span>
+                        </div>
+                        <div className="outer-orbit">
+                            <span className="outer-orbit-circle"> <Image src="/python.svg" width={50} height={50}/></span>
+                            <span > <Image src="/nodejs.svg" width={40} height={40} /></span>
+                            <span > <Image src="/expressjs.svg" width={40} height={40}/></span>
+                        </div>
+                    </div>
                     
-                    <p style={{paddingBottom:"15px"}}>Grab a copy of my cv!</p>
+                    <p style={{marginBottom:"20px"}}>Grab a copy of my cv!</p>
                     <div>
+                        
                     <a href="/Resume_EsauRahim.pdf" className={clicked ? "button_dark":"button_sub"} download>Downloadable CV</a>
                     </div>
 
-
                 </div>
 
-
                 
-                <div id="container">                    
+                <div id="contactme" className="container">                    
                     <div className="contactme_header">
-                        <h1 className="headline">Cont<span className="green">a</span>ct M<span className="red">e</span></h1>
-                        <Image className="team_icon" src="/team.png" width={70} height={70} alt="team icon"/>
-
+                        <h1 className="subheadline">Cont<span className="green">a</span>ct M<span className="red">e</span></h1>
                     </div>
                     
 
-
-                    <form className="fillable" onSubmit={handleSubmit}>
+                    <form className="fillable" >
                         <p>I'm interested in work opportunities and connecting with likeminded individuals.
                             If you have any questions regarding my portfolio or want to connect feel free to reach me below!
                         </p><br/>
-                        <input className="name" id="name" placeholder="Name" required minLength={4}/>
+                        <input className="name" id="name" placeholder="Name" value={values.name} required minLength={4}/>
                         <input className="email" id="email" placeholder="Email" required minLength={8}/>
                         <input className="subject" id="subject" placeholder="Subject" required minLength={1}/>
                         <textarea className="message" id="message" placeholder="Message" required minLength={10}/><br/>
-                        <button className={clicked ? "button_dark":"button_sub"} type="submit" >S e n d !</button>
+                        <button className={clicked ? "button_dark":"button_sub"} type="submit"  >S e n d !</button>
 
                     </form>
 
@@ -239,82 +232,80 @@ export default function Main() {
                     </div>
 
                         <br/><p>Here are some things I've created!</p><br/>
-
-                        <div className="project_grid">
-                            <div className="project_card">
-                            <div className="pro_bg"></div>
-                                <div className="card_inner">
-
-                                    <div className="project_header">
-                                        <div className="project_folder">
-                                            <Image src={"/web_light.png"} width={50} height={50} alt="project link"/>
-                                        </div>
-
-                                        <div className="project_link">
-                                            <a href="https://github.com/codehoover/plantdb" target="_blank">
-                                                <Image src={ "/link_light.png"} width={25} height={25} alt="project link"/>
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                    <h3 className="project_title"> Plantdb</h3><br/>
-
-                                    <p className="project_body"> Built a CRUD application using Next.js and Postgresql. Deployed on Vercel</p>
-
-                                </div>
-                            </div>
-
-                            <div className="project_card">
+                        
+                        <div className="proj-grid-holder">
+                            <div className="project_grid">
+                                <div className="project_card">
                                 <div className="pro_bg"></div>
-                                <div className="card_inner">
+                                    <div className="card_inner">
 
-                                    <div className="project_header">
-                                        <div className="project_folder">
-                                            <Image src={"/web_light.png"} width={50} height={50} alt="project link"/>
+                                        <div className="project_header">
+                                            <div className="project_folder">
+                                                <Image src={"/web_light.png"} width={50} height={50} alt="project link"/>
+                                            </div>
+
+                                            <div className="project_link">
+                                                <a href="https://github.com/codehoover/plantdb" target="_blank">
+                                                    <Image src={ "/link_light.png"} width={25} height={25} alt="project link"/>
+                                                </a>
+                                            </div>
                                         </div>
 
-                                        <div className="project_link">
-                                            <a href="https://github.com/codehoover/Weather_app" target="_blank">
-                                                <Image src={"/link_light.png"} width={25} height={25} alt="project link"/>
-                                            </a>
-                                        </div>
+                                        <h3 className="project_title"> Plantdb</h3><br/>
+
+                                        <p className="project_body"> Built a CRUD application using Next.js and Postgresql. Deployed on Vercel</p>
+
                                     </div>
-
-                                    <h3 className="project_title"> Weather App </h3><br/>
-
-                                    <p className="project_body"> Created an application in HTML, CSS, and JavaScript which pulls data from the openweather API to display the current weather of a select city.</p>
-
                                 </div>
-                            </div>
 
-                            <div className="project_card">
-                                <div className="pro_bg"></div>
-                                <div className="card_inner">
+                                <div className="project_card">
+                                    <div className="pro_bg"></div>
+                                    <div className="card_inner">
 
-                                    <div className="project_header">
-                                        <div className="project_folder">
-                                            <Image src={"/web_light.png"} width={50} height={50} alt="project link"/>
+                                        <div className="project_header">
+                                            <div className="project_folder">
+                                                <Image src={"/web_light.png"} width={50} height={50} alt="project link"/>
+                                            </div>
+
+                                            <div className="project_link">
+                                                <a href="https://github.com/codehoover/Weather_app" target="_blank">
+                                                    <Image src={"/link_light.png"} width={25} height={25} alt="project link"/>
+                                                </a>
+                                            </div>
                                         </div>
 
-                                        <div className="project_link">
-                                            <a href="https://github.com/codehoover/plantdb" target="_blank">
-                                                <Image src={"/link_light.png"} width={25} height={25} alt="project link"/>
-                                            </a>
-                                        </div>
+                                        <h3 className="project_title"> Weather App </h3><br/>
+
+                                        <p className="project_body"> Created an application in HTML, CSS, and JavaScript which pulls data from the openweather API to display the current weather of a select city.</p>
+
                                     </div>
-
-                                    <h3 className="project_title"> title</h3>
-
-                                    <p className="project_body"> Description</p>
-
                                 </div>
+
+                                <div className="project_card">
+                                    <div className="pro_bg"></div>
+                                    <div className="card_inner">
+
+                                        <div className="project_header">
+                                            <div className="project_folder">
+                                                <Image src={"/web_light.png"} width={50} height={50} alt="project link"/>
+                                            </div>
+
+                                            <div className="project_link">
+                                                <a href="https://github.com/codehoover/plantdb" target="_blank">
+                                                    <Image src={"/link_light.png"} width={25} height={25} alt="project link"/>
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <h3 className="project_title"> title</h3>
+
+                                        <p className="project_body"> Description</p>
+
+                                    </div>
                             </div>
-
-
-
                             
+                        </div>
 
-                            
 
                     </div>
                 </div>

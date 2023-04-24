@@ -24,7 +24,7 @@ html{
     container-type: size;
 }
 
-#container{
+.container{
     display: flex;
     flex-direction: column;
     position: relative;
@@ -217,6 +217,28 @@ input:invalid:focus{
     .headline {
         font-size: 2em;
     }
+}
+
+.subheadline{
+    position: relative;
+    font-size: 3em;
+    display: inline-block;
+    container-type: normal;
+}
+@container (max-width:500px){
+    .subheadline {
+        font-size: 2em;
+    }
+}
+.subheadline::after{
+	content:" ";
+	position:absolute;
+	top:50%;
+	width:200px;
+	border-top:1px solid slategrey;
+    border-radius: 10px;
+    margin-left: 10px;
+	
 }
 
 .E{
@@ -427,12 +449,16 @@ input:invalid:focus{
 #projects{
     display: flex;
     flex-direction: column;
+    align-items: center;
     min-height: 600px;
     margin-bottom: 50px;
     container-type: inline-size;
 }
 
-
+.proj-grid-holder{
+    display: flex;
+    justify-content: center;
+}
 .project_grid{
     display: grid;
     
@@ -444,9 +470,9 @@ input:invalid:focus{
 
 /* project cards */
 .project_card{
-    background: #121212;
+    background: #272d33;
     background-size: 200%;
-    width: 90%;
+    width: 100%;
     height: 250px;
     border-radius: 20px;
     padding: 10px;
@@ -466,7 +492,6 @@ input:invalid:focus{
     right: -60px;
     z-index: 1;
     border-radius: 50%;
-    
     transition: .5s ease;
 
 }
@@ -549,4 +574,185 @@ input:invalid:focus{
     padding: 40px;
     background-color:  #ffbc48;
 
+}
+
+
+/* word orbit segment */
+
+.orbit-container{
+    display: flex;
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    height: 300px;
+    width: 300px;
+    margin: 100px;
+}
+.center-circle{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 900;
+    height: 100px;
+    width: 100px;
+    top: 150px;
+    left: 150px;
+    border-radius: 50%;
+    background-color: rgb(85, 248, 134);
+}
+
+.inner-orbit{
+    display: inline-block;
+    position: absolute;
+    top: 75px;
+    left: 75px;
+    width: 250px;
+    height: 250px;
+    border: 2px rgb(85, 123, 248) solid;
+    border-radius: 100%;
+
+    animation: spin-right 30s linear infinite;
+
+}
+.middle-orbit{
+    position: absolute;
+    top: 5px;
+    right: -105px;
+    width: 400px;
+    height: 400px;
+    border: 2px rgb(85, 123, 248) solid;
+    border-radius: 100%;
+
+    animation: spin-right 35s linear infinite;
+}
+.outer-orbit{
+    display: inline-block;
+    position: absolute;
+    top: -90px;
+    left: -90px;
+    width: 600px;
+    height: 600px;
+    border: 2px rgb(85, 123, 248) solid;
+    border-radius: 100%;
+
+    animation: spin-right 40s linear infinite;
+
+}
+.inner-orbit-circle{
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    top: 62px;
+    left: -20px;
+    height: 55px;
+    width: 55px;
+    border-radius: 50%;
+    background-color: rgb(85, 123, 248);
+    animation: rotate-right 35s linear infinite;
+    
+}
+
+.middle-orbit-circle{
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    top: 62px;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    background-color: white;
+    animation: rotate-right 35s linear infinite;
+    
+}
+.middle-orbit span:nth-child(2){
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    top: 120px;
+    right: -20px;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    background-color: #4A437F;
+    animation: rotate-right 35s linear infinite;
+
+}
+.middle-orbit span:nth-child(3){
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    bottom: 40px;
+    left: 20px;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    background-color: #4A437F;
+    animation: rotate-right 35s linear infinite;
+
+}
+
+.outer-orbit-circle{
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    top: 62px;
+    left: 60px;
+    height: 55px;
+    width: 55px;
+    border-radius: 50%;
+    background-color: #4A437F;
+    animation: rotate-right 40s linear infinite;
+    
+}
+.outer-orbit span:nth-child(2){
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    bottom: 10px;
+    left: 130px;
+    height: 55px;
+    width: 55px;
+    border-radius: 50%;
+    background-color: #4A437F;
+    animation: rotate-right 40s linear infinite;
+}
+
+.outer-orbit span:nth-child(3){
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    top: 10px;
+    right: 120px;
+    height: 55px;
+    width: 55px;
+    border-radius: 50%;
+    background-color: white;
+    animation: rotate-right 40s linear infinite;
+}
+/* animations */
+@keyframes spin-right {
+    100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+    
+}
+
+@keyframes rotate-right {
+    100%{
+        transform: rotate(-360deg);
+    }
+    
 }
