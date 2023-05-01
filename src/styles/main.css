@@ -8,9 +8,8 @@ html{
     font-family: Roboto, sans-serif !important;
 }
 .main_content{
-    margin-right: 10px !important;
+    margin-right: 10px;
     margin-left: 10px;
-    width: 90% !important;
     display: flex;
     flex-direction: column;
 }
@@ -157,10 +156,8 @@ input:invalid:focus{
 }
 .body{
     background-color: aliceblue;
-    transition: 0.5s;
     color: black;
     display: grid;
-
 }
 
 .dark-mode{
@@ -333,50 +330,14 @@ input:invalid:focus{
 
   /*animated arrow and light/darkmode toggle*/
   
-.arrow {
-    position: absolute;
-    bottom: 150px ;
-    right: 40px;
-    transform: translate(-50%, -50%);
-    transform: rotate(0deg);
-}
-.arrow span {
-    display: block;
-    width: 30px;
-    height: 30px;
-    border-bottom: 10px solid rgb(0, 0, 0);
-    border-right: 10px solid rgb(0, 0, 0);
-    transform: rotate(45deg);
-    margin: -10px;
-    animation: animate 2s infinite;
-}
-.arrow span:nth-child(2) {
-    animation-delay: -0.2s;
-}
-
-.arrow span:nth-child(3) {
-    animation-delay: -0.4s;
-}
-
-@keyframes animate {
-    0% {
-        opacity: 0;
-        transform: rotate(45deg) translate(-20px, -20px);
-    }
-    50% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-        transform: rotate(45deg) translate(20px, 20px);
-    }
-}
 
 .toggle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: fixed;
     background-color: #1f1d1d;
     opacity: 0.5;
-    color: white;
     border-radius: 50%;
     border: gainsboro 1px solid;
     padding: 10px;
@@ -418,22 +379,25 @@ input:invalid:focus{
     z-index: 2;
 }
 
-/* card for resume */
-.card{
-    display: inline-block;
-    width: 10em;
-    height: 10em;
-    border-radius: 10px;
-    background-color: #1f1d1d;
-    padding: 5px;
-    margin: 10px;
-    transition: 0.5s;
+/* resume timeline */
+.timeline{
+    display: flex;
+    flex-direction: column;
+    width: 100px;
+    height: 100px;
 }
-.card:hover{
-    width: 11em;
-    height: 11em;
-    transition: 1s;
+.holder{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 3px rgb(248, 85, 85) solid;
+    overflow: hidden;
 }
+
 
 .img1{
     display: inline-block;
@@ -462,7 +426,7 @@ input:invalid:focus{
 .project_grid{
     display: grid;
     
-    grid-template-columns: repeat(auto-fill, minmax(300px,1fr));
+    grid-template-columns: repeat(auto-fill, minmax(350px,1fr));
     gap: 15px;
     color: white;
     
@@ -500,6 +464,9 @@ input:invalid:focus{
 }
 .project_card:nth-child(3n) .pro_bg{
     background-color: rgb(85, 248, 134);
+}
+.project_card:nth-child(4n) .pro_bg{
+    background-color: rgb(85, 123, 248);
 }
 .project_header{
     display: flex;
@@ -583,7 +550,7 @@ input:invalid:focus{
     display: flex;
     position: absolute;
     top: 25px;
-    right: 25px;
+    right: 200px;
     height: 300px;
     width: 300px;
     margin: 100px;
@@ -600,7 +567,7 @@ input:invalid:focus{
     top: 150px;
     left: 150px;
     border-radius: 50%;
-    background-color: rgb(85, 248, 134);
+    background-color: rgb(85, 123, 248);
 }
 
 .inner-orbit{

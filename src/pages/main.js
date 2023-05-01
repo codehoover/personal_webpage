@@ -157,9 +157,11 @@ export default function Main() {
                 <div id="resume" className="container">
                     <h1 className="subheadline"><span className="blue">S</span>kill<span className="yellow">s</span> <span className="green">a</span>nd <span className="red">E</span>xp<span className="blue">e</span>ri<span className="green">e</span>nc<span className="yellow">e</span></h1>
 
-                    <div>
-                        <Image className="card" src="/nellie.jpg" width={100} height={100} alt="nellie"/>
-                        <Image className="card" src="/tmu.jpg" width={100} height={100} alt="tmu"/>
+                    <div className="timeline">
+                        <span className="holder"> 
+                            <Image src="/nellie.jpg" width={50} height={50} alt="nellie"/>
+                        </span>
+
                     </div>
 
                     Here are a few languages and technologies I use:
@@ -200,7 +202,7 @@ export default function Main() {
                     <p style={{marginBottom:"20px"}}>Grab a copy of my cv!</p>
                     <div>
                         
-                    <a href="/Resume_EsauRahim.pdf" className={clicked ? "button_dark":"button_sub"} download>Downloadable CV</a>
+                    <a href="/Resume_EsauRahim.pdf" className={clicked ? "button_dark":"button_sub"} target="_blank">Downloadable CV</a>
                     </div>
 
                 </div>
@@ -253,7 +255,7 @@ export default function Main() {
 
                                         <h3 className="project_title"> Plantdb</h3><br/>
 
-                                        <p className="project_body"> Built a CRUD application using Next.js and Postgresql. Deployed on Vercel</p>
+                                        <p className="project_body"> Built a CRUD application using Next.js and Postgresql. Deployed on Vercel</p><br/>
 
                                     </div>
                                 </div>
@@ -277,6 +279,7 @@ export default function Main() {
                                         <h3 className="project_title"> Weather App </h3><br/>
 
                                         <p className="project_body"> Created an application in HTML, CSS, and JavaScript which pulls data from the openweather API to display the current weather of a select city.</p>
+
 
                                     </div>
                                 </div>
@@ -302,7 +305,30 @@ export default function Main() {
                                         <p className="project_body"> Description</p>
 
                                     </div>
-                            </div>
+                                </div>
+                                
+                                <div className="project_card">
+                                    <div className="pro_bg"></div>
+                                    <div className="card_inner">
+
+                                        <div className="project_header">
+                                            <div className="project_folder">
+                                                <Image src={"/web_light.png"} width={50} height={50} alt="project link"/>
+                                            </div>
+
+                                            <div className="project_link">
+                                                <a href="https://github.com/codehoover/plantdb" target="_blank">
+                                                    <Image src={"/link_light.png"} width={25} height={25} alt="project link"/>
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <h3 className="project_title"> title</h3>
+
+                                        <p className="project_body"> Description</p>
+
+                                    </div>
+                                </div>
                             
                         </div>
 
