@@ -1,4 +1,3 @@
-import { Content } from "next/font/google";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
@@ -38,6 +37,11 @@ export default function Main() {
 
     const [state, setState] = useState(initState);
     const {values} = state;
+
+    function changeBackground(e){
+        e.target.style.background = 'red';
+
+    }
 
 
 
@@ -180,9 +184,8 @@ export default function Main() {
                     </div>
 
                     <div className="orbit-container">
-                        <div className="center-circle">
+                        <div className="center-circle" onMouseOver={changeBackground}>
                             <Image src="/code.svg" height={50} width={50} alt="code image"/>
-
                         </div>
                         <div className="inner-orbit">
                             <span className="inner-orbit-circle"> <Image src="/reactjs-icon.svg" width={40} height={40}/></span>
@@ -218,7 +221,7 @@ export default function Main() {
                         <p>I'm interested in work opportunities and connecting with likeminded individuals.
                             If you have any questions regarding my portfolio or want to connect feel free to reach me below!
                         </p><br/>
-                        <input className="name" id="name" placeholder="Name" value={values.name} required minLength={4}/>
+                        <input className="name" id="name" placeholder="Name"  required minLength={4}/>
                         <input className="email" id="email" placeholder="Email" required minLength={8}/>
                         <input className="subject" id="subject" placeholder="Subject" required minLength={1}/>
                         <textarea className="message" id="message" placeholder="Message" required minLength={10}/><br/>
@@ -237,6 +240,7 @@ export default function Main() {
                         
                         <div className="proj-grid-holder">
                             <div className="project_grid">
+
                                 <div className="project_card">
                                 <div className="pro_bg"></div>
                                     <div className="card_inner">
@@ -264,10 +268,10 @@ export default function Main() {
                                     <div className="pro_bg"></div>
                                     <div className="card_inner">
 
-                                        <div className="project_header">
-                                            <div className="project_folder">
+                                        <div className="project_header" >
+                                            <a className="project_folder" href="https://purpl.netlify.app/" target="_blank">
                                                 <Image src={"/web_light.png"} width={50} height={50} alt="project link"/>
-                                            </div>
+                                            </a>
 
                                             <div className="project_link">
                                                 <a href="https://github.com/codehoover/Weather_app" target="_blank">

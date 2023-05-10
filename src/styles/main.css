@@ -568,6 +568,7 @@ input:invalid:focus{
     left: 150px;
     border-radius: 50%;
     background-color: rgb(85, 123, 248);
+    z-index: 4;
 }
 
 .inner-orbit{
@@ -579,9 +580,15 @@ input:invalid:focus{
     height: 250px;
     border: 2px rgb(85, 123, 248) solid;
     border-radius: 100%;
+    z-index: 3;
 
     animation: spin-right 30s linear infinite;
+    transition: 0.5s ease-in-out;
 
+}
+.inner-orbit:hover{
+    border: 2px rgb(248, 85, 85) solid;
+    transition: 0.5s ease-in-out;
 }
 .middle-orbit{
     position: absolute;
@@ -591,8 +598,14 @@ input:invalid:focus{
     height: 400px;
     border: 2px rgb(85, 123, 248) solid;
     border-radius: 100%;
+    z-index: 2;
 
     animation: spin-right 35s linear infinite;
+    transition: 0.5s ease-in-out;
+}
+.middle-orbit:hover{
+    border: 2px rgb(85, 248, 134) solid;
+    transition: 0.5s ease-in-out;
 }
 .outer-orbit{
     display: inline-block;
@@ -603,9 +616,15 @@ input:invalid:focus{
     height: 600px;
     border: 2px rgb(85, 123, 248) solid;
     border-radius: 100%;
+    z-index: 1;
 
     animation: spin-right 40s linear infinite;
+    transition: 0.5s ease-in-out;
 
+}
+.outer-orbit:hover{
+    border: 2px #ffbc48 solid;
+    transition: 0.5s ease-in-out;
 }
 .inner-orbit-circle{
     display: flex;
