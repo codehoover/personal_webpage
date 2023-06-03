@@ -39,8 +39,8 @@ export default function Main() {
     const {values} = state;
 
     function changeBackground(e){
-        e.target.style.background = 'red';
-
+        e.target.style.transform = "rotate(360deg)";
+        e.target.style.transition = "1s";
     }
 
 
