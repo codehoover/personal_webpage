@@ -1,7 +1,6 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
-
-
+import {useForm, ValidationError } from '@formspree/react';
 
 export default function Main() {
 
@@ -26,27 +25,73 @@ export default function Main() {
         };
     }, []);
 
-
-    const [formState, setFormState] = useState({});
-    const changeHandler = (event) => {
-        setFormState({...formState, [event.target.name]: event.target.value });
-    };
-
-
-    const submitHandler = (event)=> {
-        event.preventDefault();
-        const config = {
-            Securetoken: '1f612baa-a34f-4312-b4c4-993060b269b2',
-            To : 'esaurahim@gmail.com',
-            From : formState.email,
-            Subject : formState.subject,
-            Body : formState.message
-        };
-        if(window.Email){
-            window.Email.send(config).then(() => alert("email sent sucessfully"));
+    function Contactform(){
+        const [state,handleSubmit] = useForm('mjvdnbol');
+        if(state.succeeded){
+            return <p>Thanks for reaching out!</p>
         }
+        return(
+            <form className="fillable" onSubmit={handleSubmit}>
+            <p>I'm interested in work opportunities and connecting with likeminded individuals.
+            If you have any questions regarding my portfolio or want to connect feel free to reach me below!
+            </p><br/>
 
-    }
+            <input name="Name" className="name" type="text" placeholder="Name"/>
+            <input
+                className="email"
+                type="email" 
+                name="email"
+                placeholder="Email"
+            />
+            <ValidationError 
+                prefix="Email" 
+                field="email"
+                errors={state.errors}
+            />
+            <input className="subject" type="text" name="subject" placeholder="Subject"/>
+            <textarea
+                id="message"
+                name="message"
+                className="message"
+                placeholder="Message"
+            />
+            <ValidationError 
+                prefix="Message" 
+                field="message"
+                errors={state.errors}
+            />
+            <br></br>
+            <button type="submit" className={clicked ? "button_dark":"button_sub"} disabled={state.submitting}>
+            S e n d !
+            </button>
+            </form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+            
+        //     <form className="fillable" onSubmit={handleSubmit}>
+        //     <p>I'm interested in work opportunities and connecting with likeminded individuals.
+        //         If you have any questions regarding my portfolio or want to connect feel free to reach me below!
+        //     </p><br/>
+        //     <input name="name" className="name" id="name" placeholder="Name"  required minLength={4} />
+        //     <input name="email" className="email" id="email" placeholder="Email"  required minLength={8} />
+        //     <input name="subject" className="subject" id="subject" placeholder="Subject" required minLength={1} />
+        //     <textarea name="message" className="message" id="message" placeholder="Message" required minLength={10} /><br/>
+        //     <button className={clicked ? "button_dark":"button_sub"} type="submit" disabled={state.submitting} >S e n d !</button>
+        // </form>
+        );
+    };
 
 
 
@@ -226,19 +271,9 @@ export default function Main() {
                     <div className="contactme_header">
                         <h1 className="subheadline">Cont<span className="green">a</span>ct M<span className="red">e</span></h1>
                     </div>
+                    <Contactform />
                     
 
-                    <form className="fillable" onSubmit={submitHandler}>
-                        <p>I'm interested in work opportunities and connecting with likeminded individuals.
-                            If you have any questions regarding my portfolio or want to connect feel free to reach me below!
-                        </p><br/>
-                        <input name="name" className="name" id="name" placeholder="Name" value={formState.name || ""} required minLength={4} onChange={changeHandler}/>
-                        <input name="email" className="email" id="email" placeholder="Email" value={formState.email || ""} required minLength={8} onChange={changeHandler}/>
-                        <input name="subject" className="subject" id="subject" placeholder="Subject" value={formState.subject || ""} required minLength={1} onChange={changeHandler}/>
-                        <textarea name="message" className="message" id="message" placeholder="Message" value={formState.message|| ""}required minLength={10} onChange={changeHandler}/><br/>
-                        <button className={clicked ? "button_dark":"button_sub"} type="submit"  >S e n d !</button>
-
-                    </form>
 
                 </div>
 
