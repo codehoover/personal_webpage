@@ -120,12 +120,6 @@ export default function Main() {
 
                 </div>
 
-                {/* <div className="arrow">
-                    <span style={clicked ? {borderBottom:"10px solid white", borderRight:"10px solid white"}: {borderBottom:"10px solid black", borderRight:"10px solid black"} }></span>
-                    <span style={clicked ? {borderBottom:"10px solid white", borderRight:"10px solid white"}: {borderBottom:"10px solid black", borderRight:"10px solid black"} }></span>
-                    <span style={clicked ? {borderBottom:"10px solid white", borderRight:"10px solid white"}: {borderBottom:"10px solid black", borderRight:"10px solid black"} }></span>
-                </div> */}
-
                 <button className="toggle" onClick={()=> setClicked(current=> !current)}>
                     <Image src={clicked ? "/light_mode.png" : "/dark_mode.png"}
                     width={25}
@@ -164,6 +158,11 @@ export default function Main() {
                     <div className="timeline">
                         <span className="holder"> 
                             <Image src="/nellie.jpg" width={50} height={50} alt="nellie"/>
+                        </span>
+                        <span className="divider"></span>
+
+                        <span className="holder2"> 
+                            <Image src="/tmu.jpg" width={50} height={50} alt="tmu"/>
                         </span>
 
                     </div>
