@@ -1,13 +1,7 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
-const initValues = {
-    name:"",
-    email:"",
-    subject:"",
-    message:"",
-}
-const initState = {values: initValues}
+
 
 export default function Main() {
 
@@ -32,11 +26,29 @@ export default function Main() {
         };
     }, []);
 
-    // form validation
-    
 
-    const [state, setState] = useState(initState);
-    const {values} = state;
+    const [formState, setFormState] = useState({});
+    const changeHandler = (event) => {
+        setFormState({...formState, [event.target.name]: event.target.value });
+    };
+
+
+    const submitHandler = (event)=> {
+        event.preventDefault();
+        const config = {
+            Securetoken: '15d63e0a-4530-490c-b021-b2208fab5d15',
+            To : 'esaurahim@gmail.com',
+            From : formState.email,
+            Subject : formState.subject,
+            Body : formState.message
+        };
+        if(window.Email){
+            window.Email.send(config).then(() => alert("email sent sucessfully"));
+        }
+
+    }
+
+
 
     function changeBackground(e){
         e.target.style.transform = "rotate(360deg)";
@@ -216,14 +228,14 @@ export default function Main() {
                     </div>
                     
 
-                    <form className="fillable" >
+                    <form className="fillable" onSubmit={submitHandler}>
                         <p>I'm interested in work opportunities and connecting with likeminded individuals.
                             If you have any questions regarding my portfolio or want to connect feel free to reach me below!
                         </p><br/>
-                        <input className="name" id="name" placeholder="Name"  required minLength={4}/>
-                        <input className="email" id="email" placeholder="Email" required minLength={8}/>
-                        <input className="subject" id="subject" placeholder="Subject" required minLength={1}/>
-                        <textarea className="message" id="message" placeholder="Message" required minLength={10}/><br/>
+                        <input name="name" className="name" id="name" placeholder="Name" value={formState.name || ""} required minLength={4} onChange={changeHandler}/>
+                        <input name="email" className="email" id="email" placeholder="Email" value={formState.email || ""} required minLength={8} onChange={changeHandler}/>
+                        <input name="subject" className="subject" id="subject" placeholder="Subject" value={formState.subject || ""} required minLength={1} onChange={changeHandler}/>
+                        <textarea name="message" className="message" id="message" placeholder="Message" value={formState.message|| ""}required minLength={10} onChange={changeHandler}/><br/>
                         <button className={clicked ? "button_dark":"button_sub"} type="submit"  >S e n d !</button>
 
                     </form>
@@ -241,26 +253,26 @@ export default function Main() {
                             <div className="project_grid">
 
                                 <div className="project_card">
-                                <div className="pro_bg"></div>
-                                    <div className="card_inner">
+                                    <div className="pro_bg"></div>
+                                        <div className="card_inner">
 
-                                        <div className="project_header">
-                                            <div className="project_folder">
-                                                <Image src={"/web_light.png"} width={50} height={50} alt="project link"/>
+                                            <div className="project_header">
+                                                <div className="project_folder">
+                                                    <Image src={"/web_light.png"} width={50} height={50} alt="project link"/>
+                                                </div>
+
+                                                <div className="project_link">
+                                                    <a href="https://github.com/codehoover/plantdb" target="_blank">
+                                                        <Image src={ "/link_light.png"} width={25} height={25} alt="project link"/>
+                                                    </a>
+                                                </div>
                                             </div>
 
-                                            <div className="project_link">
-                                                <a href="https://github.com/codehoover/plantdb" target="_blank">
-                                                    <Image src={ "/link_light.png"} width={25} height={25} alt="project link"/>
-                                                </a>
-                                            </div>
+                                            <h3 className="project_title"> Plantdb</h3><br/>
+
+                                            <p className="project_body"> Built a CRUD application using Next.js and Postgresql. Deployed on Vercel</p><br/>
+
                                         </div>
-
-                                        <h3 className="project_title"> Plantdb</h3><br/>
-
-                                        <p className="project_body"> Built a CRUD application using Next.js and Postgresql. Deployed on Vercel</p><br/>
-
-                                    </div>
                                 </div>
 
                                 <div className="project_card">
@@ -297,15 +309,15 @@ export default function Main() {
                                             </div>
 
                                             <div className="project_link">
-                                                <a href="https://github.com/codehoover/plantdb" target="_blank">
+                                                <a href="#" target="_blank">
                                                     <Image src={"/link_light.png"} width={25} height={25} alt="project link"/>
                                                 </a>
                                             </div>
                                         </div>
 
-                                        <h3 className="project_title"> title</h3>
+                                        <h3 className="project_title"> More projects coming soon!</h3>
 
-                                        <p className="project_body"> Description</p>
+                                        <p className="project_body"> </p>
 
                                     </div>
                                 </div>
@@ -320,15 +332,15 @@ export default function Main() {
                                             </div>
 
                                             <div className="project_link">
-                                                <a href="https://github.com/codehoover/plantdb" target="_blank">
+                                                <a href="#" target="_blank">
                                                     <Image src={"/link_light.png"} width={25} height={25} alt="project link"/>
                                                 </a>
                                             </div>
                                         </div>
 
-                                        <h3 className="project_title"> title</h3>
+                                        <h3 className="project_title"> More projects coming soon!</h3>
 
-                                        <p className="project_body"> Description</p>
+                                        <p className="project_body"> </p>
 
                                     </div>
                                 </div>
