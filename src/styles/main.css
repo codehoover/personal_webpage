@@ -7,6 +7,14 @@ html{
 *{
     font-family: Roboto, sans-serif !important;
 }
+#resume{
+    @media (max-width:1300px) {
+        .orbit-container {
+            display: none;
+        }
+        
+    }
+}
 .main_content{
     margin-right: 10px;
     margin-left: 10px;
@@ -190,9 +198,7 @@ input:invalid:focus{
     
     transition: 1s;
 }
-.Resume{
-    font-family: Roboto;
-}
+
 .container_res{
     margin-left: 15px;
     margin-right: 5vw;
@@ -382,17 +388,18 @@ input:invalid:focus{
 
 /* resume timeline */
 .divider{
-    border-top: #f85555 3px dashed;
-    width: 200px;
+    border-left: #f85555 3px dashed;
+    height: 200px;
     margin: 5px;
 }
 .timeline{
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     margin-top: 10px;
-    height: 100px;
-    width: 300px;
+    height: 300px;
+    width: 60%;
 }
 .holder{
     display: flex;
@@ -403,6 +410,10 @@ input:invalid:focus{
     border-radius: 50%;
     border: 4px rgb(248, 85, 85) solid;
     overflow: hidden;
+}
+.holder:hover{
+    opacity: 0.6;
+    transition: 0.5s;
 }
 .holder2{
     display: flex;
@@ -564,6 +575,7 @@ input:invalid:focus{
 /* word orbit segment */
 
 .orbit-container{
+
     display: flex;
     position: absolute;
     top: 25px;

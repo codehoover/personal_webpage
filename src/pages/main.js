@@ -65,40 +65,22 @@ export default function Main() {
             S e n d !
             </button>
             </form>
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-            
-        //     <form className="fillable" onSubmit={handleSubmit}>
-        //     <p>I'm interested in work opportunities and connecting with likeminded individuals.
-        //         If you have any questions regarding my portfolio or want to connect feel free to reach me below!
-        //     </p><br/>
-        //     <input name="name" className="name" id="name" placeholder="Name"  required minLength={4} />
-        //     <input name="email" className="email" id="email" placeholder="Email"  required minLength={8} />
-        //     <input name="subject" className="subject" id="subject" placeholder="Subject" required minLength={1} />
-        //     <textarea name="message" className="message" id="message" placeholder="Message" required minLength={10} /><br/>
-        //     <button className={clicked ? "button_dark":"button_sub"} type="submit" disabled={state.submitting} >S e n d !</button>
-        // </form>
         );
     };
 
+    function changeBackground2(e){
+        e.target.style.transform = "rotate(-360deg)";
+        e.target.style.transition = "1s";
 
+    }
 
     function changeBackground(e){
         e.target.style.transform = "rotate(360deg)";
         e.target.style.transition = "1s";
     }
+
+
+
 
 
 
@@ -213,7 +195,7 @@ export default function Main() {
                     <h1 className="subheadline"><span className="blue">S</span>kill<span className="yellow">s</span> <span className="green">a</span>nd <span className="red">E</span>xp<span className="blue">e</span>ri<span className="green">e</span>nc<span className="yellow">e</span></h1>
 
                     <div className="timeline">
-                        <span className="holder"> 
+                        <span className="holder" > 
                             <Image src="/nellie.jpg" width={50} height={50} alt="nellie"/>
                         </span>
                         <span className="divider"></span>
@@ -240,7 +222,7 @@ export default function Main() {
                     </div>
 
                     <div className="orbit-container">
-                        <div className="center-circle" onMouseOver={changeBackground}>
+                        <div className="center-circle" onMouseOver={changeBackground} onMouseOut={changeBackground2}>
                             <Image src="/code.svg" height={50} width={50} alt="code image"/>
                         </div>
                         <div className="inner-orbit">
