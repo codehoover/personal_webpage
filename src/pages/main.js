@@ -36,7 +36,7 @@ export default function Main() {
     const submitHandler = (event)=> {
         event.preventDefault();
         const config = {
-            Securetoken: '15d63e0a-4530-490c-b021-b2208fab5d15',
+            Securetoken: '1f612baa-a34f-4312-b4c4-993060b269b2',
             To : 'esaurahim@gmail.com',
             From : formState.email,
             Subject : formState.subject,
