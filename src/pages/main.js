@@ -79,7 +79,29 @@ export default function Main() {
         e.target.style.transition = "1s";
     }
 
+    const [isHovering, setIsHovering] = useState(false);
 
+    const handleOnClick = () =>{
+        setIsHovering(true);
+    }
+    const handleMouseOut = () =>{
+        setIsHovering(false);
+    }
+
+    function NellieDetails(){
+        return(
+            <div>
+                <h4>Software Developer @ Nellie Health</h4>
+                <ul>
+                    <li> Implemented an automated end to end test script using Cypress.io</li>
+                    <li> Developed an instant messaging chat component where clinicians and clients would be able to communicate using React.js and Node.js</li>
+                    <li> Added dynamic sizing as well as date and time functionality to the appointment scheduler component</li>
+                    <li> Created forms/exercises in JSON which were administered to the clients</li>
+                    <li> Addressed regular production bugs while utilizing CI/CD pipelines to rapidly iterate</li>
+                </ul>
+            </div>  
+        );
+    }
 
 
 
@@ -193,17 +215,29 @@ export default function Main() {
 
                 <div id="resume" className="container">
                     <h1 className="subheadline"><span className="blue">S</span>kill<span className="yellow">s</span> <span className="green">a</span>nd <span className="red">E</span>xp<span className="blue">e</span>ri<span className="green">e</span>nc<span className="yellow">e</span></h1>
-
+                    <h3>Where I've worked</h3>
                     <div className="timeline">
-                        <span className="holder" > 
-                            <Image src="/nellie.jpg" width={50} height={50} alt="nellie"/>
-                        </span>
-                        <span className="divider"></span>
+                        <div className="highlight-styled"></div>
+                        <div className="panel">
+                            <button className="tab-0">Nellie Health</button>
+                            <button className="tab-1">Toronto Metropolitan University</button>
+                            
+                        </div>
+                        
 
-                        <span className="holder2"> 
-                            <Image src="/tmu.jpg" width={50} height={50} alt="tmu"/>
-                        </span>
+                        <div className="testing_div">
+                            <h2>Software Developer @ Nellie Health</h2>
+                            <h4>Dec 2021 - Nov 2022</h4>
+                            <ul>
+                                <li> Implemented an automated end to end test script using Cypress.io</li>
+                                <li> Developed an instant messaging chat component where clinicians and clients would be able to communicate using React.js and Node.js</li>
+                                <li> Added dynamic sizing as well as date and time functionality to the appointment scheduler component</li>
+                                <li> Created forms/exercises in JSON which were administered to the clients</li>
+                                <li> Addressed regular production bugs while utilizing CI/CD pipelines to rapidly iterate</li>
+                            </ul>
+                        </div>  
 
+                        
                     </div>
 
                     Here are a few languages and technologies I use:
@@ -255,7 +289,6 @@ export default function Main() {
                     </div>
                     <Contactform />
                     
-
 
                 </div>
 

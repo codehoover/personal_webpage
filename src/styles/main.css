@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 
+.testing_div{
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+    width: 600px;
+}
+
 html{
     scroll-behavior: smooth;
 
@@ -7,6 +14,7 @@ html{
 *{
     font-family: Roboto, sans-serif !important;
 }
+
 #resume{
     @media (max-width:1300px) {
         .orbit-container {
@@ -387,45 +395,66 @@ input:invalid:focus{
 }
 
 /* resume timeline */
-.divider{
-    border-left: #f85555 3px dashed;
-    height: 200px;
-    margin: 5px;
-}
+
 .timeline{
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start;
+    flex-direction: row;
     margin-top: 10px;
     height: 300px;
     width: 60%;
 }
-.holder{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 50px;
+.highlight-styled{
+    width: 2px;
     height: 50px;
-    border-radius: 50%;
-    border: 4px rgb(248, 85, 85) solid;
-    overflow: hidden;
+    background-color: slategray;
 }
-.holder:hover{
-    opacity: 0.6;
+.panel{
+    display: flex;
+    flex-direction: column;
+    margin-right: 40px;
+    transition: 0.2s;
+}
+.tab-0{
+    outline: none;
+    background-color: transparent;
+    color: slategray;
+    border: none;
+    font-size: 18px;
+    width: 90%;
+    height: 50px;
+    
+    transition:0.3s;
+}
+.tab-0:hover{
+    background-color: rgba(19, 192, 57, 0.1);
+    color: #ffbc48;
     transition: 0.5s;
+    cursor: pointer;
 }
-.holder2{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    border: 4px rgb(248, 85, 85) solid;
-    overflow: hidden;
+.tab-0:focus{
+    color: #ffbc48;
 }
 
+.tab-1{
+    outline: none;
+    background-color: transparent;
+    color: slategray;
+    border: none;
+    font-size: 18px;
+    width: 90%;
+    height: 50px;
+    
+    transition:0.3s;
+}
+.tab-1:hover{
+    background-color: rgba(19, 192, 57, 0.1);
+    color: #ffbc48;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.tab-1:focus{
+    color: #ffbc48;
+}
 
 .img1{
     display: inline-block;
@@ -540,11 +569,19 @@ input:invalid:focus{
 
 
 .logo{
-    display: inline-block;
+    display: flex;
     position: absolute;
+    align-items: center;
+    justify-content: center;
     right: 400px;
-    top: 400px;
+    top: 300px;
+    width: 200px;
+    height: 200px;
     animation: float 5s infinite ease;
+
+    @media (max-width:1400px) {
+        display: none;
+    }
 }
 
 @keyframes float {
