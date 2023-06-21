@@ -176,7 +176,7 @@ export default function Main() {
                     </div>
     
                     <div className="logo">
-                        <h2>  "L O G O" </h2>
+                        <Image src={clicked ? "/BlueER.png" : "/RedER.png"} width={500} height={500} alt="Esau logo"/>
                     </div>
 
                 </div>

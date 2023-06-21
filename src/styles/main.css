@@ -123,7 +123,7 @@ html{
 }
 
 .fillable{
-    font-family: Roboto;
+    font-family: Roboto, sans-serif !important;
     padding-top: 10px;
     width: 50%;
     display: inline-block;
@@ -159,7 +159,7 @@ input:invalid:focus{
     width:150%;
     max-width: 390px;
     outline: none;
-    font-family: Roboto;
+    font-family: Roboto, sans-serif !important;
 }
 .subject{
     display: block;
@@ -332,7 +332,7 @@ input:invalid:focus{
 .nav{
     transition: transform 0.5s;
     display: block;
-    font-family: Roboto;
+    font-family: Roboto, sans-serif !important;
     font-size: 20px;
     font-weight: 600;
     position: relative;
