@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 
+
+body{
+    -webkit-font-smoothing: subpixel-antialiased;
+}
 .testing_div{
     display: flex;
     flex-direction: column;
