@@ -1,8 +1,8 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import {useForm, ValidationError } from '@formspree/react';
-import Nellie from "@/Work_description/Nellie";
-import Tmu from "@/Work_description/tmu";
+import Nellie from "../Work_description/Nellie";
+import Tmu from "../Work_description/Tmu"
 
 export default function Main() {
 
