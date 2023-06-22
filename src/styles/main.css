@@ -419,6 +419,7 @@ input:invalid:focus{
     background-color: transparent;
     color: slategray;
     border: none;
+    border-left: 3px solid slategray ;
     font-size: 18px;
     width: 90%;
     height: 50px;
@@ -427,12 +428,16 @@ input:invalid:focus{
 }
 .tab-0:hover{
     background-color: rgba(19, 192, 57, 0.1);
-    color: #ffbc48;
+    color: rgb(248, 85, 85);
+    border: none;
+    border-left: 3px solid rgb(85, 248, 134);
     transition: 0.5s;
     cursor: pointer;
 }
 .tab-0:focus{
-    color: #ffbc48;
+    color: rgb(248, 85, 85);
+    border: none;
+    border-left: 3px solid rgb(85, 248, 134);
 }
 
 .tab-1{
@@ -440,6 +445,7 @@ input:invalid:focus{
     background-color: transparent;
     color: slategray;
     border: none;
+    border-left: 3px solid slategray ;;
     font-size: 18px;
     width: 90%;
     height: 50px;
@@ -449,11 +455,15 @@ input:invalid:focus{
 .tab-1:hover{
     background-color: rgba(19, 192, 57, 0.1);
     color: #ffbc48;
+    border: none;
+    border-left: 3px solid rgb(85, 248, 134);
     transition: 0.5s;
     cursor: pointer;
 }
 .tab-1:focus{
     color: #ffbc48;
+    border: none;
+    border-left: 3px solid rgb(85, 248, 134);
 }
 
 .img1{
