@@ -13,7 +13,6 @@ html{
 }
 *{
     font-family: Roboto, sans-serif !important;
-    font-weight: 900;
     font-style: normal;
 }
 
@@ -39,6 +38,9 @@ html{
     padding-top: 250px;
     padding-bottom: 400px;
     container-type: size;
+    font-family: Roboto, sans-serif !important;
+    font-weight: 900;
+    font-style: normal;
 }
 
 .container{
