@@ -656,7 +656,14 @@ input:invalid:focus{
     height: 300px;
     width: 300px;
     margin: 100px;
+    container-type: inline-size
 }
+@container (max-width:1500px){
+    .orbit-container{
+        display: none;
+    }
+}
+
 .center-circle{
     display: flex;
     position: relative;
