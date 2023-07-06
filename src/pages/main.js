@@ -3,19 +3,39 @@ import { useEffect, useState } from "react";
 import {useForm, ValidationError } from '@formspree/react';
 import Nellie from "../Work_description/Nellie";
 import Tmu from "../Work_description/Tmu"
+import Tmu2 from "../Work_description/Tmu2";
+import Tmu3 from "../Work_description/Tmu3";
 
 export default function Main() {
 
     const[nellieState, setNellie] = useState(false);
     const[tmuState,setTmu] = useState(false);
+    const[tmu2State,setTmu2] = useState(false);
+    const[tmu3State,setTmu3] = useState(false);
 
     const handleNellie = () =>{
         setNellie(true);
         setTmu(false);
+        setTmu2(false);
+        setTmu3(false);
     }
     const handleTMU = () =>{
         setNellie(false);
         setTmu(true);
+        setTmu2(false);
+        setTmu3(false);
+    }
+    const handleTMU2 = () =>{
+        setNellie(false);
+        setTmu(false);
+        setTmu2(true);
+        setTmu3(false);
+    }
+    const handleTMU3 = () =>{
+        setNellie(false);
+        setTmu(false);
+        setTmu2(false);
+        setTmu3(true);
     }
 
     const [clicked, setClicked] = useState(false);
@@ -110,10 +130,17 @@ export default function Main() {
         <div className={clicked ? "dark-mode" : "body"}>
         
             <div className={"headbar" + hState} >
-                    <a href="#aboutme" className="nav" >About Me</a>
-                    <a href="#resume" className="nav">Work</a>
-                    <a href="#contactme" className="nav">Contact</a>
-                    <a href="#projects" className="nav">Projects</a>
+                <div className="navlogo">
+                <a href="#" className="homenav"><Image src="/ER_logo.png" width={100} height={100} alt="Esau Rahim home menu"/></a>
+                </div>
+
+                <div className="navmenu">
+                <a href="#aboutme" className="nav" >About Me</a>
+                <a href="#resume" className="nav">Work</a>
+                <a href="#contactme" className="nav">Contact</a>
+                <a href="#projects" className="nav">Projects</a>
+                </div>
+
             </div>
 
             <span className={clicked ? "circle2":"circle"}>
@@ -174,7 +201,7 @@ export default function Main() {
                     </div>
     
                     <div className="logo">
-                        <Image src={clicked ? "/BlueER.png" : "/RedER.png"} width={500} height={500} alt="Esau logo"/>
+                        <Image src={clicked ? "/BlueER.png" : "/ER_logo.png"} width={600} height={600} alt="Esau logo" priority={true}/>
                     </div>
 
                 </div>
@@ -198,7 +225,7 @@ export default function Main() {
                     <div className="aboutme_body">
                         <h2>Dedicated developer based in Canada</h2>
                         <p>
-                            Hi, welcome to my portfolio! My name is Esau and I'm a FullStack Developer located in Canada. I am a recent Computer Science Graduate (BsC. Comp Sci Hons) from Toronto Metropolitan University (formerly Ryerson University) .<br/><br/>
+                            Hi, welcome to my portfolio! My name is Esau and I'm a FullStack Developer located in Canada. I am a recent Computer Science Graduate (BsC. Comp Sci Hons) from Toronto Metropolitan University (formerly Ryerson University).<br/><br/>
 
                             I regard myself as a well organized, problem solver with a results oriented approach.<br/><br/>
 
@@ -216,12 +243,15 @@ export default function Main() {
                     <h3>Where I've worked</h3>
                     <div className="timeline">
                         <div className="panel">
-                            <button className="tab-0" onClick={handleNellie}>Nellie Health</button>
-                            <button className="tab-1"onClick={handleTMU}>Toronto Metropolitan University</button>
-                            
+                            <button className="tab-1" onClick={handleNellie}>Nellie Health</button>
+                            <button className="tab-1" onClick={handleTMU}>TMU</button>
+                            <button className="tab-1" onClick={handleTMU2}>TMU</button>
+                            <button className="tab-1" onClick={handleTMU3}>TMU</button>
                         </div>
                         {nellieState && <Nellie/>}
                         {tmuState && <Tmu/>}
+                        {tmu2State && <Tmu2/> }
+                        {tmu3State && <Tmu3/>}
 
                         
                     </div>

@@ -4,11 +4,30 @@
 body{
     -webkit-font-smoothing: subpixel-antialiased;
 }
+::-webkit-scrollbar{
+    width: 10px;
+}
+::-webkit-scrollbar-thumb{
+    background: #557bf8;
+    border-radius: 10px;
+}
 .testing_div{
     display: flex;
     flex-direction: column;
     height: 200px;
     width: 600px;
+    animation: switch 1s  ease-out;
+
+}
+
+@keyframes switch {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+    
 }
 
 html{
@@ -16,17 +35,19 @@ html{
 
 }
 *{
-    font-family: Roboto, sans-serif !important;
+    font-family: var(--font-sans);
+    font-weight: 600;
     font-style: normal;
 }
 
 #resume{
-    @media (max-width:1300px) {
+    @media screen and (max-width:1650px) {
         .orbit-container {
             display: none;
         }
         
     }
+    
 }
 .main_content{
     margin-right: 10px;
@@ -42,8 +63,8 @@ html{
     padding-top: 250px;
     padding-bottom: 400px;
     container-type: size;
-    font-family: Roboto, sans-serif !important;
-    font-weight: 900;
+    font-family: var(--font-mono);
+    font-weight: 600;
     font-style: normal;
 }
 
@@ -51,8 +72,9 @@ html{
     display: flex;
     flex-direction: column;
     position: relative;
-    height: 600px;
+    height: 670px;
     margin-bottom: 50px;
+    overflow: hidden;
     container-type: size;
 }
 @container (max-width: 500px){
@@ -62,6 +84,7 @@ html{
     .stack{
         font-size: 0.7em
     }
+
 
 }
 
@@ -131,7 +154,7 @@ html{
 }
 
 .fillable{
-    font-family: Roboto, sans-serif !important;
+    font-family: var(--font-sans);
     padding-top: 10px;
     width: 50%;
     display: inline-block;
@@ -167,7 +190,7 @@ input:invalid:focus{
     width:150%;
     max-width: 390px;
     outline: none;
-    font-family: Roboto, sans-serif !important;
+    font-family: var(--font-mono);
 }
 .subject{
     display: block;
@@ -230,7 +253,8 @@ input:invalid:focus{
 
 .headline{
     position: relative;
-    font-size: 5em;
+    font-size: clamp(40px, 8vw, 80px);
+    font-weight: 600;
     display: inline-block;
 }
 @container (max-width:500px){
@@ -310,7 +334,8 @@ input:invalid:focus{
     background-color:rgb(237, 243, 248);
     color: black;
     display: flex;
-    justify-content: flex-end;
+    flex-direction: row;
+    justify-content: space-between;
 }
 .headbardown{
     position: sticky;
@@ -320,7 +345,7 @@ input:invalid:focus{
     height: 50px;
     
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     transition: 0.5s; 
 }
 .headbarup{
@@ -334,13 +359,22 @@ input:invalid:focus{
     background-color:rgb(237, 243, 248);
     color: black;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     transition: 0.5s;
+}
+.navmenu{
+    display: flex;
+}
+.homenav{
+    position: absolute;
+    top: -20px;
+    left: -20px;
+
 }
 .nav{
     transition: transform 0.5s;
     display: block;
-    font-family: Roboto, sans-serif !important;
+    font-family: var(--font-mono);
     font-size: 20px;
     font-style: normal;
     font-weight: 600;
@@ -351,7 +385,9 @@ input:invalid:focus{
     transform: translateY(-10px);
 }
 
+.homenav{
 
+}
   /*animated arrow and light/darkmode toggle*/
   
 
@@ -410,7 +446,7 @@ input:invalid:focus{
     flex-direction: row;
     margin-top: 10px;
     height: 300px;
-    width: 60%;
+    width: 80%;
 }
 .highlight-styled{
     width: 2px;
@@ -421,32 +457,7 @@ input:invalid:focus{
     display: flex;
     flex-direction: column;
     margin-right: 40px;
-    transition: 0.2s;
-}
-.tab-0{
-    outline: none;
-    background-color: transparent;
-    color: slategray;
-    border: none;
-    border-left: 3px solid slategray ;
-    font-size: 18px;
-    width: 90%;
-    height: 50px;
-    
-    transition:0.3s;
-}
-.tab-0:hover{
-    background-color: rgba(19, 192, 57, 0.1);
-    color: rgb(248, 85, 85);
-    border: none;
-    border-left: 3px solid rgb(85, 248, 134);
-    transition: 0.5s;
-    cursor: pointer;
-}
-.tab-0:focus{
-    color: rgb(248, 85, 85);
-    border: none;
-    border-left: 3px solid rgb(85, 248, 134);
+    width: 10vw;
 }
 
 .tab-1{
@@ -458,6 +469,9 @@ input:invalid:focus{
     font-size: 18px;
     width: 90%;
     height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     
     transition:0.3s;
 }
@@ -597,10 +611,14 @@ input:invalid:focus{
     width: 200px;
     height: 200px;
     animation: float 5s infinite ease;
+    container-type: inline-size;
 
-    @media (max-width:1400px) {
+}
+@container (max-width:1500px) {
+    .logo{
         display: none;
     }
+
 }
 
 @keyframes float {
@@ -668,6 +686,9 @@ input:invalid:focus{
     z-index: 3;
 
     animation: spin-right 30s linear infinite;
+    -webkit-animation: spin-right 30s linear infinite;
+    -moz-animation: spin-right 30s linear infinite;
+    -o-animation: spin-right 30s linear infinite;
     transition: 0.5s ease-in-out;
 
 }
@@ -686,6 +707,9 @@ input:invalid:focus{
     z-index: 2;
 
     animation: spin-right 35s linear infinite;
+    -webkit-animation: spin-right 35s linear infinite;
+    -moz-animation: spin-right 35s linear infinite;
+    -o-animation: spin-right 35s linear infinite;
     transition: 0.5s ease-in-out;
 }
 .middle-orbit:hover{
@@ -704,6 +728,9 @@ input:invalid:focus{
     z-index: 1;
 
     animation: spin-right 40s linear infinite;
+    -webkit-animation: spin-right 40s linear infinite;
+    -moz-animation: spin-right 40s linear infinite;
+    -o-animation: spin-right 40s linear infinite;
     transition: 0.5s ease-in-out;
 
 }
@@ -723,6 +750,9 @@ input:invalid:focus{
     border-radius: 50%;
     background-color: rgb(85, 123, 248);
     animation: rotate-right 35s linear infinite;
+    -webkit-animation: rotate-right 35s linear infinite;
+    -moz-animation: rotate-right 35s linear infinite;
+    -o-animation: rotate-right 35s linear infinite;
     
 }
 
@@ -737,6 +767,9 @@ input:invalid:focus{
     border-radius: 50%;
     background-color: white;
     animation: rotate-right 35s linear infinite;
+    -webkit-animation: rotate-right 35s linear infinite;
+    -moz-animation: rotate-right 35s linear infinite;
+    -o-animation: rotate-right 35s linear infinite;
     
 }
 .middle-orbit span:nth-child(2){
@@ -751,6 +784,9 @@ input:invalid:focus{
     border-radius: 50%;
     background-color: #4A437F;
     animation: rotate-right 35s linear infinite;
+    -webkit-animation: rotate-right 35s linear infinite;
+    -moz-animation: rotate-right 35s linear infinite;
+    -o-animation: rotate-right 35s linear infinite;
 
 }
 .middle-orbit span:nth-child(3){
@@ -765,6 +801,9 @@ input:invalid:focus{
     border-radius: 50%;
     background-color: #4A437F;
     animation: rotate-right 35s linear infinite;
+    -webkit-animation: rotate-right 35s linear infinite;
+    -moz-animation: rotate-right 35s linear infinite;
+    -o-animation: rotate-right 35s linear infinite;
 
 }
 
@@ -780,6 +819,9 @@ input:invalid:focus{
     border-radius: 50%;
     background-color: #4A437F;
     animation: rotate-right 40s linear infinite;
+    -webkit-animation: rotate-right 40s linear infinite;
+    -moz-animation: rotate-right 40s linear infinite;
+    -o-animation: rotate-right 40s linear infinite;
     
 }
 .outer-orbit span:nth-child(2){
@@ -794,6 +836,10 @@ input:invalid:focus{
     border-radius: 50%;
     background-color: #4A437F;
     animation: rotate-right 40s linear infinite;
+    -webkit-animation: rotate-right 40s linear infinite;
+    -moz-animation: rotate-right 40s linear infinite;
+    -o-animation: rotate-right 40s linear infinite;
+    
 }
 
 .outer-orbit span:nth-child(3){
@@ -808,6 +854,9 @@ input:invalid:focus{
     border-radius: 50%;
     background-color: white;
     animation: rotate-right 40s linear infinite;
+    -webkit-animation: rotate-right 40s linear infinite;
+    -moz-animation: rotate-right 40s linear infinite;
+    -o-animation: rotate-right 40s linear infinite;
 }
 /* animations */
 @keyframes spin-right {
@@ -823,6 +872,10 @@ input:invalid:focus{
 
 @keyframes rotate-right {
     100%{
+        -webkit-transform: rotate(-360deg);
+        -moz-transform: rotate(-360deg);
+        -ms-transform: rotate(-360deg);
+        -o-transform: rotate(-360deg);
         transform: rotate(-360deg);
     }
     

@@ -13,8 +13,8 @@ export default function Home() {
         <title>Esau Rahim | Software Developer</title>
         <meta name="description" content="Passionate Developer based in Canada" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/RedER.png" />
-        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"/>
+        <link rel="icon" href="/ER_logo.png" />
+        <link href='http://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'></link>
       </Head>
       <main >
         <Main/>
