@@ -131,7 +131,7 @@ export default function Main() {
         
             <div className={"headbar" + hState} >
                 <div className="navlogo">
-                <a href="#" className="homenav"><Image src="/ER_logo.png" width={100} height={100} alt="Esau Rahim home menu"/></a>
+                <a href="#" className="homenav"><Image src="/ER_logo_L.png" width={100} height={100} alt="Esau Rahim home menu"/></a>
                 </div>
 
                 <div className="navmenu">
@@ -201,7 +201,7 @@ export default function Main() {
                     </div>
     
                     <div className="logo">
-                        <Image src={clicked ? "/BlueER.png" : "/ER_logo.png"} width={600} height={600} alt="Esau logo" priority={true}/>
+                        <Image src={clicked ? "/ER_logo_D.png" : "/ER_logo_L.png"} width={600} height={600} alt="Esau logo" priority={true}/>
                     </div>
 
                 </div>
@@ -222,18 +222,34 @@ export default function Main() {
                         M<span className="red">e</span>
                     </h1>
 
+                    <h2>Dedicated developer based in Canada</h2><br/>
+
                     <div className="aboutme_body">
-                        <h2>Dedicated developer based in Canada</h2>
-                        <p>
-                            Hi, welcome to my portfolio! My name is Esau and I'm a FullStack Developer located in Canada. I am a recent Computer Science Graduate (BsC. Comp Sci Hons) from Toronto Metropolitan University (formerly Ryerson University).<br/><br/>
+                        <div className="aboutme_desc">
+                            <p>
+                                Hi, welcome to my portfolio! My name is Esau and I'm a FullStack Developer located in Canada. I am a recent Computer Science Graduate (BsC. Comp Sci Hons) from Toronto Metropolitan University (formerly Ryerson University).<br/><br/>
+                                Motivated and skilled software developer with 1 year of full-stack experience using React.js, Node.js, Express.js, and Strapi. Proficient in Python, HTML, JavaScript, and CSS with 4 years of experience developing research studies. Highly adept at utilizing WordPress and AEM to create and manage web pages. A proactive team player experienced in Agile Scrum environments.<br/><br/>
 
-                            I regard myself as a well organized, problem solver with a results oriented approach.<br/><br/>
+                                I regard myself as a well organized, problem solver with a results oriented approach.<br/><br/>
 
-                            Outside of programming I am a movie connoisseur, sports enthusiast and avid supporter of the Toronto Raptors!
-                            If you would like to see my past awards in athletics as well as academics please see <a href="#">Awards</a>. <br/>
-                            <br/><br/>
-                        </p><br/>
-
+                                Outside of programming I am a movie connoisseur, sports enthusiast and avid supporter of the Toronto Raptors!
+                                If you would like to see my past awards in athletics as well as academics please see <a href="#">Awards</a>. <br/>
+                                <br/><br/>
+                            </p>
+                        </div>
+{/* 
+                            <p className="aboutme_img">
+                                function about_me() &#123;<br/> 
+                                &nbsp; var name = 'Esau'; <br/>
+                                &nbsp; const location = 'Canada'; <br/>
+                                &nbsp; var university = 'Toronto Metropolitan University';<br/>
+                                &nbsp; var bane_of_my_existence = 'Toronto Raptors'; <br/>
+                                &#125;<br/><br/>
+                                function awards() &#123;<br/>
+                                
+                                &#125;<br/> 
+                                <span className="caret_anim">&#95;</span> 
+                            </p> */}
                     </div>
                     
                 </div>

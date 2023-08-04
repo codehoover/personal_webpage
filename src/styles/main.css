@@ -62,7 +62,6 @@ html{
     padding-top: 250px;
     padding-bottom: 400px;
     container-type: size;
-    font-family: var(--font-mono);
     font-weight: 700;
     font-style: normal;
 }
@@ -86,13 +85,41 @@ html{
 
 
 }
-
+.aboutme_desc{
+    width: 500px;
+}
 .aboutme_body{
     width: 100%;
     margin-right: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-family: var(--font-mono);
 }
 
-
+.aboutme_img{
+    color: #55f886;
+    font-family: var(--font-mono);
+    border: 2px rgb(85, 123, 248) solid;
+    border-radius: 2px;
+    width: 500px;
+    height: 400px;
+    padding: 40px;
+}
+.caret_anim{
+    animation: blink 1s infinite;
+}
+@keyframes blink{
+    0%{
+        opacity:0;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
 .contactme_header{
     display: flex;
     align-items: center;
@@ -189,7 +216,7 @@ input:invalid:focus{
     width:150%;
     max-width: 390px;
     outline: none;
-    font-family: var(--font-mono);
+    font-family: var(--font-sans);
 }
 .subject{
     display: block;
@@ -373,7 +400,7 @@ input:invalid:focus{
 .nav{
     transition: transform 0.5s;
     display: block;
-    font-family: var(--font-mono);
+    font-family: var(--font-sans);
     font-size: 20px;
     font-style: normal;
     font-weight: 600;
