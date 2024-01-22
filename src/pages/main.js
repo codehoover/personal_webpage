@@ -5,6 +5,8 @@ import Nellie from "../Work_description/Nellie";
 import Tmu from "../Work_description/Tmu"
 import Tmu2 from "../Work_description/Tmu2";
 import Tmu3 from "../Work_description/Tmu3";
+import Wip from "../Section/WIP";
+import WIP from "@/Section/WIP";
 
 export default function Main() {
 
@@ -387,19 +389,19 @@ export default function Main() {
 
                                         <div className="project_header">
                                             <div className="project_folder">
-                                                <Image src={"/web_light.png"} width={50} height={50} alt="project link"/>
+                                                
                                             </div>
 
                                             <div className="project_link">
-                                                <a href="#" target="_blank">
+                                                <a href="https://github.com/codehoover/ecom_page" target="_blank">
                                                     <Image src={"/link_light.png"} width={25} height={25} alt="project link"/>
                                                 </a>
                                             </div>
                                         </div>
 
-                                        <h3 className="project_title"> More projects coming soon!</h3>
+                                        <h3 className="project_title"> Astro Athletics</h3>
 
-                                        <p className="project_body"> </p>
+                                        <p className="project_body"> Astro Athletics is a clothing brand/ecommerce site. It is still currently in the works!</p>
 
                                     </div>
                                 </div>
@@ -432,6 +434,7 @@ export default function Main() {
 
                     </div>
                 </div>
+                <WIP/>
 
             </div>
 
