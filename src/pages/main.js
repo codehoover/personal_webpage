@@ -338,29 +338,6 @@ export default function Main() {
 
                                 <div className="project_card">
                                     <div className="pro_bg"></div>
-                                        <div className="card_inner">
-
-                                            <div className="project_header">
-                                                <div className="project_folder">
-                                                    <Image src={"/web_light.png"} width={50} height={50} alt="project link"/>
-                                                </div>
-
-                                                <div className="project_link">
-                                                    <a href="https://github.com/codehoover/plantdb" target="_blank">
-                                                        <Image src={ "/link_light.png"} width={25} height={25} alt="project link"/>
-                                                    </a>
-                                                </div>
-                                            </div>
-
-                                            <h3 className="project_title"> Plantdb</h3><br/>
-
-                                            <p className="project_body"> Built a CRUD application using Next.js and Postgresql. Deployed on Vercel</p><br/>
-
-                                        </div>
-                                </div>
-
-                                <div className="project_card">
-                                    <div className="pro_bg"></div>
                                     <div className="card_inner">
 
                                         <div className="project_header" >
@@ -388,9 +365,9 @@ export default function Main() {
                                     <div className="card_inner">
 
                                         <div className="project_header">
-                                            <div className="project_folder">
-                                                
-                                            </div>
+                                            <a className="project_folder" href="https://astro-athletics.vercel.app/" target="_blank">
+                                                <Image src={"/web_light.png"} width={50} height={50} alt="project link"/>
+                                            </a>
 
                                             <div className="project_link">
                                                 <a href="https://github.com/codehoover/ecom_page" target="_blank">
@@ -401,11 +378,35 @@ export default function Main() {
 
                                         <h3 className="project_title"> Astro Athletics</h3>
 
-                                        <p className="project_body"> Astro Athletics is a clothing brand/ecommerce site. It is still currently in the works!</p>
+                                        <p className="project_body"> Astro Athletics is a clothing brand/ecommerce site meant to display my front-end
+                                        design capabilities. It is still currently in the works!</p>
 
                                     </div>
                                 </div>
                                 
+                                <div className="project_card">
+                                    <div className="pro_bg"></div>
+                                    <div className="card_inner">
+
+                                        <div className="project_header">
+                                            <div className="project_folder">
+                                                <Image src={"/web_light.png"} width={50} height={50} alt="project link"/>
+                                            </div>
+
+                                            <div className="project_link">
+                                                <a href="#" target="_blank">
+                                                    <Image src={"/link_light.png"} width={25} height={25} alt="project link"/>
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <h3 className="project_title"> More projects coming soon!</h3>
+
+                                        <p className="project_body"> </p>
+
+                                    </div>
+                                </div>
+
                                 <div className="project_card">
                                     <div className="pro_bg"></div>
                                     <div className="card_inner">
