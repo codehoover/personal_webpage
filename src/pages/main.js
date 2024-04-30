@@ -5,8 +5,10 @@ import Nellie from "../Work_description/Nellie";
 import Tmu from "../Work_description/Tmu"
 import Tmu2 from "../Work_description/Tmu2";
 import Tmu3 from "../Work_description/Tmu3";
+import Cloud_Genie from "../Work_description/Cloud_Genie";
 import Wip from "../Section/WIP";
 import WIP from "@/Section/WIP";
+import Project_Card from "@/components/Project_card";
 
 export default function Main() {
 
@@ -14,30 +16,43 @@ export default function Main() {
     const[tmuState,setTmu] = useState(false);
     const[tmu2State,setTmu2] = useState(false);
     const[tmu3State,setTmu3] = useState(false);
+    const[cgState, setCG] = useState(false)
 
     const handleNellie = () =>{
         setNellie(true);
         setTmu(false);
         setTmu2(false);
         setTmu3(false);
+        setCG(false);
     }
     const handleTMU = () =>{
         setNellie(false);
         setTmu(true);
         setTmu2(false);
         setTmu3(false);
+        setCG(false);
     }
     const handleTMU2 = () =>{
         setNellie(false);
         setTmu(false);
         setTmu2(true);
         setTmu3(false);
+        setCG(false);
     }
     const handleTMU3 = () =>{
         setNellie(false);
         setTmu(false);
         setTmu2(false);
         setTmu3(true);
+        setCG(false);
+    }
+
+    const handleCG = () =>{
+        setNellie(false);
+        setTmu(false);
+        setTmu2(false);
+        setTmu3(false);
+        setCG(true);
     }
 
     const [clicked, setClicked] = useState(false);
@@ -64,7 +79,7 @@ export default function Main() {
     function Contactform(){
         const [state,handleSubmit] = useForm('mjvdnbol');
         if(state.succeeded){
-            return <p>Thanks for reaching out!</p>
+            return <p id="form-complete">Thanks for reaching out!</p>
         }
         return(
             <form className="fillable" onSubmit={handleSubmit}>
@@ -261,6 +276,7 @@ export default function Main() {
                     <h3>Where I've worked</h3>
                     <div className="timeline">
                         <div className="panel">
+                            <button className="tab-1" onClick={handleCG}>Cloud Genie</button>
                             <button className="tab-1" onClick={handleNellie}>Nellie Health</button>
                             <button className="tab-1" onClick={handleTMU}>TMU</button>
                             <button className="tab-1" onClick={handleTMU2}>TMU</button>
@@ -270,6 +286,7 @@ export default function Main() {
                         {tmuState && <Tmu/>}
                         {tmu2State && <Tmu2/> }
                         {tmu3State && <Tmu3/>}
+                        {cgState && <Cloud_Genie/>}
 
                         
                     </div>
@@ -376,59 +393,22 @@ export default function Main() {
                                             </div>
                                         </div>
 
-                                        <h3 className="project_title"> Astro Athletics</h3>
+                                        <h3 className="project_title"> Astro Athletics</h3> <br/>
 
                                         <p className="project_body"> Astro Athletics is a clothing brand/ecommerce site meant to display my front-end
-                                        design capabilities. It is still currently in the works!</p>
+                                        design capabilities. Built using Nextjs.</p>
 
                                     </div>
                                 </div>
+
+                                <Project_Card title={"Peak"} 
+                                desc={"Peak is a fitness app where you can create a routine and schedule your workouts. It is currently in the works and will be updated bi-weekly."} 
+                                code_link={"https://github.com/codehoover/peak"}
+                                link={"https://peak-seven.vercel.app/"}/>
+                                <Project_Card title={"Relay"}
+                                desc={"Relay is a blog platform developed using the MERN (MongoDB, Express, React, Node) stack"}/>
                                 
-                                <div className="project_card">
-                                    <div className="pro_bg"></div>
-                                    <div className="card_inner">
 
-                                        <div className="project_header">
-                                            <div className="project_folder">
-                                                <Image src={"/web_light.png"} width={50} height={50} alt="project link"/>
-                                            </div>
-
-                                            <div className="project_link">
-                                                <a href="#" target="_blank">
-                                                    <Image src={"/link_light.png"} width={25} height={25} alt="project link"/>
-                                                </a>
-                                            </div>
-                                        </div>
-
-                                        <h3 className="project_title"> More projects coming soon!</h3>
-
-                                        <p className="project_body"> </p>
-
-                                    </div>
-                                </div>
-
-                                <div className="project_card">
-                                    <div className="pro_bg"></div>
-                                    <div className="card_inner">
-
-                                        <div className="project_header">
-                                            <div className="project_folder">
-                                                <Image src={"/web_light.png"} width={50} height={50} alt="project link"/>
-                                            </div>
-
-                                            <div className="project_link">
-                                                <a href="#" target="_blank">
-                                                    <Image src={"/link_light.png"} width={25} height={25} alt="project link"/>
-                                                </a>
-                                            </div>
-                                        </div>
-
-                                        <h3 className="project_title"> More projects coming soon!</h3>
-
-                                        <p className="project_body"> </p>
-
-                                    </div>
-                                </div>
                             
                         </div>
 

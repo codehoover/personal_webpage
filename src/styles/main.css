@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 
 
+
+#form-complete{
+    animation: switch 0.5s ease-in;
+}
 body{
     -webkit-font-smoothing: subpixel-antialiased;
 }
