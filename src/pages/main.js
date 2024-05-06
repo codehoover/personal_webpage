@@ -406,7 +406,9 @@ export default function Main() {
                                 code_link={"https://github.com/codehoover/peak"}
                                 link={"https://peak-seven.vercel.app/"}/>
                                 <Project_Card title={"Relay"}
-                                desc={"Relay is a blog platform developed using the MERN (MongoDB, Express, React, Node) stack"}/>
+                                desc={"Relay is a blog platform developed using the MERN (MongoDB, Express, React, Node) stack"}
+                                code_link={"https://github.com/codehoover/Relay"}
+                                link={"https://relay-seven.vercel.app/"}/>
                                 
 
                             
