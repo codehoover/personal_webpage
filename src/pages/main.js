@@ -546,7 +546,7 @@ export default function Main() {
               <Project_Card
                 title={"Peak"}
                 desc={
-                  "Peak is a fitness app where you can create a routine and schedule your workouts. It is currently in the works and will be updated bi-weekly."
+                  "Peak is a fitness app where you can create a routine and schedule your workouts. It is currently in closed beta on apple and google play store."
                 }
                 code_link={"https://github.com/codehoover/peak"}
                 link={"https://peak-fitness.vercel.app//"}
