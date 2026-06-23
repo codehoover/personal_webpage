@@ -24,21 +24,21 @@ export default function Main() {
     setNellie(true);
     setTmu(false);
     setTmu2(false);
-    setTmu3(false);
+    setPrice(false);
     setCG(false);
   };
   const handleTMU = () => {
     setNellie(false);
     setTmu(true);
     setTmu2(false);
-    setTmu3(false);
+    setPrice(false);
     setCG(false);
   };
   const handleTMU2 = () => {
     setNellie(false);
     setTmu(false);
     setTmu2(true);
-    setTmu3(false);
+    setPrice(false);
     setCG(false);
   };
 
@@ -46,14 +46,13 @@ export default function Main() {
     setNellie(false);
     setTmu(false);
     setTmu2(false);
-    setTmu3(false);
+    setPrice(false);
     setCG(true);
   };
   const handlePrice = () => {
     setNellie(false);
     setTmu(false);
     setTmu2(false);
-    setTmu3(false);
     setCG(false);
     setPrice(true);
   };
@@ -289,13 +288,12 @@ export default function Main() {
           <div className="aboutme_body">
             <div className="aboutme_desc">
               <p>
-                Hi, welcome to my portfolio! My name is Esau and I'm a FullStack
-                Developer located in Canada. I am a recent Computer Science
-                Graduate (BsC. Comp Sci Hons) from Toronto Metropolitan
-                University (formerly Ryerson University).
+                I'm a Computer Science graduate from Toronto Metropolitan
+                (formerly Ryerson University) University who's been coding since
+                well before the degree made it official.
                 <br />
                 <br />
-                Motivated and skilled software developer with 1 year of
+                Motivated and skilled software developer with multiple years of
                 full-stack experience using React.js, Node.js, Express.js, and
                 Strapi. Proficient in Python, HTML, JavaScript, and CSS with 4
                 years of experience developing research studies. Highly adept at
@@ -307,10 +305,10 @@ export default function Main() {
                 results oriented approach.
                 <br />
                 <br />
-                Outside of programming I am a movie connoisseur, sports
-                enthusiast and avid supporter of the Toronto Raptors! If you
-                would like to see my past awards in athletics as well as
-                academics please see <a href="#">Awards</a>. <br />
+                Outside of programming I'm a film nerd, a proud Raptors fan, and
+                a former varsity athlete (which means I take teamwork pretty
+                seriously). If you would like to see my past awards in athletics
+                as well as academics please see <a href="#">Awards</a>. <br />
                 <br />
                 <br />
               </p>
