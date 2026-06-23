@@ -10,7 +10,6 @@ import Price from "../Work_description/PriceIndustries";
 import Wip from "../Section/WIP";
 import WIP from "@/Section/WIP";
 import Project_Card from "@/components/Project_card";
-import PriceIndustries from "../Work_description/PriceIndustries";
 
 export default function Main() {
   const [nellieState, setNellie] = useState(false);
@@ -18,7 +17,6 @@ export default function Main() {
   const [tmu2State, setTmu2] = useState(false);
   const [tmu3State, setTmu3] = useState(false);
   const [cgState, setCG] = useState(false);
-  const [priceState, setPrice] = useState(false);
 
   const handleNellie = () => {
     setNellie(true);
@@ -26,7 +24,6 @@ export default function Main() {
     setTmu2(false);
     setTmu3(false);
     setCG(false);
-    setPrice(false);
   };
   const handleTMU = () => {
     setNellie(false);
@@ -34,7 +31,6 @@ export default function Main() {
     setTmu2(false);
     setTmu3(false);
     setCG(false);
-    setPrice(false);
   };
   const handleTMU2 = () => {
     setNellie(false);
@@ -42,7 +38,13 @@ export default function Main() {
     setTmu2(true);
     setTmu3(false);
     setCG(false);
-    setPrice(false);
+  };
+  const handleTMU3 = () => {
+    setNellie(false);
+    setTmu(false);
+    setTmu2(false);
+    setTmu3(true);
+    setCG(false);
   };
 
   const handleCG = () => {
@@ -51,15 +53,6 @@ export default function Main() {
     setTmu2(false);
     setTmu3(false);
     setCG(true);
-    setPrice(false);
-  };
-  const handlePrice = () => {
-    setNellie(false);
-    setTmu(false);
-    setTmu2(false);
-    setTmu3(false);
-    setCG(false);
-    setPrice(true);
   };
 
   const [clicked, setClicked] = useState(false);
@@ -345,9 +338,6 @@ export default function Main() {
           <h3>Where I've worked</h3>
           <div className="timeline">
             <div className="panel">
-              <button className="tab-1" onClick={handlePrice}>
-                Price Industries
-              </button>
               <button className="tab-1" onClick={handleCG}>
                 Cloud Genie
               </button>
@@ -360,13 +350,15 @@ export default function Main() {
               <button className="tab-1" onClick={handleTMU2}>
                 TMU
               </button>
+              <button className="tab-1" onClick={handleTMU3}>
+                TMU
+              </button>
             </div>
             {nellieState && <Nellie />}
             {tmuState && <Tmu />}
             {tmu2State && <Tmu2 />}
             {tmu3State && <Tmu3 />}
             {cgState && <Cloud_Genie />}
-            {priceState && <PriceIndustries />}
           </div>
           Here are a few languages and technologies I use:
           <div>
