@@ -7,10 +7,7 @@ import Tmu2 from "../Work_description/Tmu2";
 import Tmu3 from "../Work_description/Tmu3";
 import Cloud_Genie from "../Work_description/Cloud_Genie";
 import Price from "../Work_description/PriceIndustries";
-import Wip from "../Section/WIP";
-import WIP from "@/Section/WIP";
 import Project_Card from "@/components/Project_card";
-import PriceIndustries from "../Work_description/PriceIndustries";
 
 export default function Main() {
   const [nellieState, setNellie] = useState(false);
@@ -288,28 +285,53 @@ export default function Main() {
           <div className="aboutme_body">
             <div className="aboutme_desc">
               <p>
-                I'm a Computer Science graduate from Toronto Metropolitan
-                (formerly Ryerson University) University who's been coding since
-                well before the degree made it official.
+                I'm a
+                <span style={{ color: "rgb(248, 85, 85)", fontWeight: "bold" }}>
+                  &nbsp;full stack developer&nbsp;
+                </span>
+                with multiple years of experience covering numerous different
+                projects, technologies and industries as well as a graduate from
+                Toronto Metropolitan University (formerly Ryerson University)
+                who's been coding since well before the degree made it official.
                 <br />
                 <br />
-                Motivated and skilled software developer with multiple years of
-                full-stack experience using React.js, Node.js, Express.js, and
-                Strapi. Proficient in Python, HTML, JavaScript, and CSS with 4
-                years of experience developing research studies. Highly adept at
-                utilizing WordPress and AEM to create and manage web pages. A
-                proactive team player experienced in Agile Scrum environments.
+                Currently, I'm on the&nbsp;
+                <a
+                  style={{ color: "rgb(85, 123, 248)", fontWeight: "bold" }}
+                  href="https://priceindustries.com/resources/software/"
+                  target="_blank"
+                >
+                  Select
+                </a>
+                &nbsp;Development team at
+                <a
+                  style={{
+                    color: "rgb(85, 123, 248)",
+                    fontWeight: "bold",
+                  }}
+                  href="https://priceindustries.com/"
+                  target="_blank"
+                >
+                  &nbsp;Price Industries
+                </a>
+                &nbsp; where I build, debug and maintain the code base ensuring
+                a quality product for our users. I'm also helping develop&nbsp;
+                <a
+                  style={{ color: "rgb(85, 123, 248)", fontWeight: "bold" }}
+                  href="https://www.coinage.media/"
+                  target="_blank"
+                >
+                  Coinage
+                </a>
+                &nbsp;, the first community-owned media outlet and Peak Fitness
+                (yes I'm still working on it) a free fitness tracker for coaches
+                and gym-goers.
                 <br />
                 <br />
-                I regard myself as a well organized, problem solver with a
-                results oriented approach.
-                <br />
-                <br />
-                Outside of programming I'm a film nerd, a proud Raptors fan, and
-                a former varsity athlete (which means I take teamwork pretty
-                seriously). If you would like to see my past awards in athletics
-                as well as academics please see <a href="#">Awards</a>. <br />
-                <br />
+                Outside of work I'm a film nerd, a proud Raptors fan, League of
+                Legends player (unfortunately) and avid gym-goer. if you feel
+                like talking tech or have any interesting opportunities you
+                think I would be a good fit for shoot me a message!
                 <br />
               </p>
             </div>
@@ -360,7 +382,7 @@ export default function Main() {
             {tmu2State && <Tmu2 />}
             {tmu3State && <Tmu3 />}
             {cgState && <Cloud_Genie />}
-            {priceState && <PriceIndustries />}
+            {priceState && <Price />}
           </div>
           Here are a few languages and technologies I use:
           <div>
