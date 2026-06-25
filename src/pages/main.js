@@ -329,7 +329,7 @@ export default function Main() {
                 <br />
                 <br />
                 Outside of work I'm a film nerd, a proud Raptors fan, League of
-                Legends player (unfortunately) and avid gym-goer. if you feel
+                Legends player (unfortunately) and avid gym-goer. If you feel
                 like talking tech or have any interesting opportunities you
                 think I would be a good fit for shoot me a message!
                 <br />
