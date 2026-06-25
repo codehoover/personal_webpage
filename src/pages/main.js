@@ -362,7 +362,7 @@ export default function Main() {
           <div className="timeline">
             <div className="panel">
               <button className="tab-1" onClick={handlePrice}>
-                Price Industries
+                <p>Price Industries</p>
               </button>
               <button className="tab-1" onClick={handleCG}>
                 Cloud Genie
